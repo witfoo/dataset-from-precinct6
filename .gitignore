@@ -1,0 +1,48 @@
+# Environment and secrets
+.env
+customer_config.json
+
+# Data directories (contain sensitive data, never commit)
+data/raw/
+data/raw-*/
+data/sanitized/
+data/sanitized-*/
+data/output/
+data/output-*/
+
+# PII Registry (contains mapping of real to fake values)
+*.db
+*.db-shm
+*.db-wal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+.eggs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/

@@ -1,0 +1,29 @@
+{
+  "_comment": "Customer-specific configuration for PII sanitization.",
+  "_instructions": "Copy this file to customer_config.json and fill in your organization details. These mappings ensure your org names, domains, and IDs are consistently sanitized across all records.",
+
+  "organizations": {
+    "_comment": "Map your Precinct org slugs (as they appear in Cassandra) to sanitized replacements.",
+    "your_org_slug": "ORG-0001",
+    "another_org": "ORG-0002"
+  },
+
+  "organization_display_names": {
+    "_comment": "Map display names (as they appear in log data) to the same sanitized tokens.",
+    "Your Organization Name": "ORG-0001",
+    "Another Org Inc": "ORG-0002"
+  },
+
+  "customer_domains": [
+    "_comment: List all domains owned by your organization(s) that should be sanitized.",
+    "yourdomain.com",
+    "yourdomain.net",
+    "internal.yourdomain.com"
+  ],
+
+  "organization_ids": {
+    "_comment": "Map Precinct orgId integers to sanitized sequential IDs.",
+    "12345": 10001,
+    "67890": 10002
+  }
+}

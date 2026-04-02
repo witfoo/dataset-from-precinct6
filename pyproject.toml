@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "precinct6-dataset"
+version = "1.0.0"
+description = "Generate labeled cybersecurity datasets from WitFoo Precinct 6.x deployments"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+authors = [
+    {name = "WitFoo", email = "support@witfoo.com"}
+]
+keywords = [
+    "cybersecurity", "dataset", "intrusion-detection", "provenance-graph",
+    "MITRE-ATT&CK", "SOAR", "security-operations", "IDS", "labeled-dataset",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "cassandra-driver>=3.29.0",
+    "python-dotenv>=1.0.0",
+    "orjson>=3.9.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "networkx>=3.0",
+    "tqdm>=4.66.0",
+    "ahocorasick-rs>=0.22.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "presidio-analyzer>=2.2.0",
+    "presidio-anonymizer>=2.2.0",
+    "spacy>=3.7.0",
+    "transformers>=4.35.0",
+    "torch>=2.1.0",
+]
+claude = [
+    "anthropic>=0.40.0",
+]
+monitor = [
+    "rich>=13.0.0",
+]
+all = [
+    "precinct6-dataset[ml,claude,monitor]",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.scripts]
+precinct6-dataset = "precinct6_dataset.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/witfoo/dataset-from-precinct6"
+Documentation = "https://github.com/witfoo/dataset-from-precinct6/tree/main/docs"
+Repository = "https://github.com/witfoo/dataset-from-precinct6"
+Issues = "https://github.com/witfoo/dataset-from-precinct6/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,6407 @@
+{
+  "products": {
+    "1": {
+      "name": "Stealthwatch",
+      "vendor": "Cisco",
+      "streams": [
+        "Stealthwatch High Concern Index",
+        "Stealthwatch Suspect Data Hoarding Alarm",
+        "Stealthwatch Suspect Data Hoarding",
+        "Stealthwatch Suspect Data Loss",
+        "Stealthwatch Suspect Quiet Long Flow",
+        "stealth_watch",
+        "lancope_stealthwatch"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "2": {
+      "name": "QRadar",
+      "vendor": "IBM",
+      "streams": [
+        "QRadar Offense"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "3": {
+      "name": "Advanced Malware Protection (AMP)",
+      "vendor": "Cisco",
+      "streams": [
+        "AMP Detection",
+        "AMP Ransomware",
+        "AMP Event",
+        "AMP Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "5": {
+      "name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black",
+      "streams": [
+        "CarbonBlack Protect Detection",
+        "CarbonBlack Ransomware Detection",
+        "CarbonBlack Respond Detection",
+        "bit9",
+        "carbonblack_cbdefense_syslog_connector",
+        "carbonblack_analytics"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "6": {
+      "name": "Precinct",
+      "vendor": "WitFoo",
+      "streams": [
+        "WitFoo Precinct"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "nist800171",
+        "csf",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "7": {
+      "name": "Falcon",
+      "vendor": "Crowdstrike",
+      "streams": [
+        "Crowdstrike Detection",
+        "Crowdstrike Ransomware Detection",
+        "crowdstrike_falcon",
+        "Crowdstrike Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "8": {
+      "name": "Symantec Endpoint Protection",
+      "vendor": "Symantec",
+      "streams": [
+        "symantec_sep",
+        "symantec_sep_ransomware",
+        "symantec antivirus",
+        "symantec endpoint protection client"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "9": {
+      "name": "Firepower",
+      "vendor": "Cisco",
+      "streams": [
+        "estreamer",
+        "firepower",
+        "cisco_firepower",
+        "sfims"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "10": {
+      "name": "STIX/Taxii",
+      "vendor": "Taxii",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "17": {
+      "name": "ASA Firewall",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_asa_deny",
+        "cisco_asa"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "18": {
+      "name": "Windows Logs",
+      "vendor": "Microsoft",
+      "streams": [
+        "microsoft_windows_security_audit",
+        "windows_security_audit",
+        "windows_sysmon",
+        "windows_task_scheduler"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "19": {
+      "name": "Websense",
+      "vendor": "Websense",
+      "streams": [
+        "websense"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "20": {
+      "name": "PAN NGFW",
+      "vendor": "Palo Alto",
+      "streams": [
+        "pan_firewall",
+        "palo alto networks_pan-os"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "21": {
+      "name": "Checkpoint FW",
+      "vendor": "Checkpoint",
+      "streams": [
+        "checkpoint_firewall",
+        "checkpoint_smart1",
+        "check point_vpn-1 & firewall-1",
+        "check point_smartdefense",
+        "check point_log update",
+        "check point_security gateway/management",
+        "check point_syslog"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "22": {
+      "name": "Tippingpoint IPS",
+      "vendor": "Tippingpoint",
+      "streams": [
+        "tippingpoint_block"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "23": {
+      "name": "FireEye Email Security (EX Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_emps"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "24": {
+      "name": "TrapX",
+      "vendor": "TrapX",
+      "streams": [
+        "trapx_tsoc"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "25": {
+      "name": "InfoBlox",
+      "vendor": "InfoBlox",
+      "streams": [
+        "infoblox_nios"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "26": {
+      "name": "Meraki",
+      "vendor": "Cisco",
+      "streams": [
+        "meraki",
+        "meraki_flow",
+        "meraki_firewall",
+        "meraki_l7_firewall",
+        "meraki_vpn"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "27": {
+      "name": "N-Central",
+      "vendor": "Solarwinds",
+      "streams": [
+        "NCentral Detection"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "28": {
+      "name": "Suricata IDS",
+      "vendor": "Suricata",
+      "streams": [
+        "suricata"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "29": {
+      "name": "Radware Appwall",
+      "vendor": "Radware",
+      "streams": [
+        "radware_waf"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "30": {
+      "name": "Trend Deep Security",
+      "vendor": "Trend Micro",
+      "streams": [
+        "trend micro_deep security agent",
+        "trend micro_deep discovery inspector"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "31": {
+      "name": "zScaler NSS",
+      "vendor": "zScaler",
+      "streams": [
+        "zscaler_nssweblog"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "32": {
+      "name": "Protect",
+      "vendor": "ProofPoint",
+      "streams": [
+        "proofpoint_protect",
+        "proofpoint"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "33": {
+      "name": "Mist Wireless",
+      "vendor": "Mist",
+      "streams": [
+        "mist"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "34": {
+      "name": "Cisco Ironport",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_ironport"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "35": {
+      "name": "Cybereason",
+      "vendor": "Cybereason",
+      "streams": [
+        "Cybereason CNC Detection",
+        "Cybereason RANSOMWARE Detection",
+        "Cybereason KNOWN_MALWARE Detection",
+        "Cybereason MALICIOUS_PROCESS Detection",
+        "Cybereason PROCESS_INJECTION Detection"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "36": {
+      "name": "Fortigate",
+      "vendor": "Fortinet",
+      "streams": [
+        "fortigate",
+        "fortinet_fortigate"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "37": {
+      "name": "Cognito",
+      "vendor": "Vectra Networks",
+      "streams": [
+        "vectra networks_x series"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "38": {
+      "name": "Umbrella",
+      "vendor": "Cisco",
+      "streams": [
+        "OpenDNS Detection",
+        "Umbrella Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "39": {
+      "name": "OSSEC",
+      "vendor": "OSSEC",
+      "streams": [
+        "ossec"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "40": {
+      "name": "Malwarebytes Anti-Malware",
+      "vendor": "Malwarebytes",
+      "streams": [
+        "malwarebytes_mbmc"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "41": {
+      "name": "Cisco Threat Response",
+      "vendor": "Cisco",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "42": {
+      "name": "Vulnerability Management",
+      "vendor": "Qualys",
+      "streams": [
+        "Qualys Vulnerability"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "43": {
+      "name": "Windows Active Directory",
+      "vendor": "Microsoft",
+      "streams": [
+        "Microsoft-Windows-Security-Auditing",
+        "UserManagement",
+        "microsoft_windows_security_audit",
+        "microsoft-windows-security-auditing"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "44": {
+      "name": "Symantec Data Loss Prevention",
+      "vendor": "Symantec",
+      "streams": [
+        "symantec_dlp"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "45": {
+      "name": "BRO IDS",
+      "vendor": "BRO IDS",
+      "streams": [
+        "bro"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "46": {
+      "name": "DatAdvantage",
+      "vendor": "Varonis",
+      "streams": [
+        "varonis inc._datadvantage"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "47": {
+      "name": "Centrify",
+      "vendor": "Centrify",
+      "streams": [
+        "centrify"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "48": {
+      "name": "ASM",
+      "vendor": "F5",
+      "streams": [
+        "f5_asm",
+        "f5"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "49": {
+      "name": "SecureSphere",
+      "vendor": "Imperva",
+      "streams": [
+        "imperva_secure_sphere"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "50": {
+      "name": "Secret Server",
+      "vendor": "Thycotic",
+      "streams": [
+        "thycotic software_secret server"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "51": {
+      "name": "McAfee Web Gateway",
+      "vendor": "McAfee",
+      "streams": [
+        "mcafee_web_gateway"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "52": {
+      "name": "Cylance Protect",
+      "vendor": "Cylance",
+      "streams": [
+        "Cylance MALWARE Detection",
+        "Cylance TRUSTED Detection",
+        "Cylance PUP Detection",
+        "Cylance Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "53": {
+      "name": "Threatmetrix",
+      "vendor": "Threatmetrix",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "54": {
+      "name": "Wazuh",
+      "vendor": "Wazuh",
+      "streams": [
+        "wazuh inc._wazuh"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "55": {
+      "name": "NetGuard",
+      "vendor": "Nokia",
+      "streams": [
+        "nokia_netguard"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "56": {
+      "name": "Sophos Central",
+      "vendor": "Sophos",
+      "streams": [
+        "Sophos Detection"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "57": {
+      "name": "Advanced Threat Analytics",
+      "vendor": "Microsoft",
+      "streams": [
+        "microsoft_ata"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "58": {
+      "name": "McAfee ePolicy Orchestrator",
+      "vendor": "McAfee",
+      "streams": [
+        "mcafee_epo"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "59": {
+      "name": "Cisco Wireless",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_wireless_lan_controller"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "60": {
+      "name": "Juniper FW",
+      "vendor": "Juniper",
+      "streams": [
+        "juniper_srx"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "61": {
+      "name": "Barracuda WAF",
+      "vendor": "Barracuda",
+      "streams": [
+        "barracuda_waf"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "62": {
+      "name": "Apache Web Server",
+      "vendor": "Apache",
+      "streams": [
+        "apache_access_log"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "63": {
+      "name": "Cloudwatch",
+      "vendor": "Amazon Web Services",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "64": {
+      "name": "Cloudtrail",
+      "vendor": "Amazon Web Services",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "65": {
+      "name": "Guard Duty",
+      "vendor": "Amazon Web Services",
+      "streams": [
+        "aws_guard_duty_findings"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "66": {
+      "name": "Security Manager",
+      "vendor": "Ericsson",
+      "streams": [
+        "ericsson_security_manager"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "67": {
+      "name": "Gin Access Log",
+      "vendor": "Gin",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "68": {
+      "name": "Mojo Wireless",
+      "vendor": "Mojo",
+      "streams": [
+        "mojo_wireless"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "69": {
+      "name": "NameD",
+      "vendor": "Linux",
+      "streams": [
+        "named"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "70": {
+      "name": "Netscaler",
+      "vendor": "Citrix",
+      "streams": [
+        "netscaler"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "71": {
+      "name": "Netscout",
+      "vendor": "Netscout",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "72": {
+      "name": "POSTFIX",
+      "vendor": "POSTFIX",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "73": {
+      "name": "SSHD",
+      "vendor": "Linux",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "74": {
+      "name": "DHCP",
+      "vendor": "Microsoft",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "75": {
+      "name": "Secure Cloud",
+      "vendor": "Zix",
+      "streams": [
+        "zix_email"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "76": {
+      "name": "Gigamon GigaVUE",
+      "vendor": "Gigamon",
+      "streams": [
+        "gigamon_gigavue"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "77": {
+      "name": "NetFlow v5, v7, v9",
+      "vendor": "Multiple",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "78": {
+      "name": "IPFIX",
+      "vendor": "Multiple",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "79": {
+      "name": "Common Event Format (CEF)",
+      "vendor": "Multiple",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "80": {
+      "name": "Log Event Extended Format (LEEF)",
+      "vendor": "Multiple",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "81": {
+      "name": "pfSense Firewall",
+      "vendor": "pfSense",
+      "streams": [
+        "pf_sense_firewall"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "82": {
+      "name": "SonicWall Firewall",
+      "vendor": "SonicWall",
+      "streams": [
+        "sonic_wall_firewall",
+        "sonicwall_nsa 3600"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "83": {
+      "name": "Senhasegura PAM",
+      "vendor": "Senhasegura",
+      "streams": [
+        "senhasegura_pam"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "84": {
+      "name": "SpamTitan",
+      "vendor": "Titan",
+      "streams": [
+        "spam_titan"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "85": {
+      "name": "WitFoo IOC Feed",
+      "vendor": "WitFoo",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "86": {
+      "name": "FireEye Network Security (NX Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_mps"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "87": {
+      "name": "FireEye Endpoint Security (HX Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_hx"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "88": {
+      "name": "FireEye Malware Analysis (AX Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_mas"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "89": {
+      "name": "FireEye File Protect (FX Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_fmps"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "90": {
+      "name": "FireEye Central Management (CM Series)",
+      "vendor": "FireEye",
+      "streams": [
+        "fireeye_cms"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "91": {
+      "name": "fail2ban",
+      "vendor": "Linux",
+      "streams": [
+        "fail2ban"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "92": {
+      "name": "AWS VPC Security",
+      "vendor": "Amazon Web Services",
+      "streams": [
+        "aws_vpc_flow_log"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "93": {
+      "name": "AWS Instance Backup",
+      "vendor": "Amazon Web Services",
+      "streams": [
+        "aws_cloudtrail_events"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "94": {
+      "name": "Azure Security",
+      "vendor": "Microsoft",
+      "streams": [
+        "azure_security_alert",
+        "microsoft_ata",
+        "Microsoft Graph Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "95": {
+      "name": "Unify Security Gateway",
+      "vendor": "Ubiquity",
+      "streams": [
+        "unifi_security_gateway"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "96": {
+      "name": "Advanced Endpoint Security",
+      "vendor": "Deep Instinct",
+      "streams": [
+        "deep instinct_d-appliance",
+        "deepinstinct",
+        "Deep Instinct Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "97": {
+      "name": "Roqos Core",
+      "vendor": "Roqos",
+      "streams": [
+        "roqos"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "98": {
+      "name": "HPE Nimble",
+      "vendor": "HPE",
+      "streams": [
+        "hpe_nimble"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "99": {
+      "name": "Uncomplicated Firewall (UFW)",
+      "vendor": "linux",
+      "streams": [
+        "ufw"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "100": {
+      "name": "Cisco ISE",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_ise"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "101": {
+      "name": "Tufin SecureTrack",
+      "vendor": "Tufin",
+      "streams": [
+        "tufin_st_policy"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "102": {
+      "name": "Shibboleth IDP",
+      "vendor": "Shibboleth",
+      "streams": [
+        "shibboleth"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "103": {
+      "name": "AT&T Arris Gateway",
+      "vendor": "AT&T",
+      "streams": [
+        "att_arris_gateway"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "104": {
+      "name": "VMWare VCenter",
+      "vendor": "VMWare",
+      "streams": [
+        "vcenter"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "105": {
+      "name": "Cisco Network Operating System",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_os"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "106": {
+      "name": "McAfee Network Security",
+      "vendor": "McAfee",
+      "streams": [
+        "mcafee_nsp"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "107": {
+      "name": "Pulse Secure",
+      "vendor": "Pulse",
+      "streams": [
+        "pulse_secure"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nst800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "108": {
+      "name": "Beyond Trust",
+      "vendor": "Beyond Trust",
+      "streams": [
+        "beyond_trust",
+        "beyond_trust_ad_bridge"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "109": {
+      "name": "Web Security Appliance (WSA)",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_wsa"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "110": {
+      "name": "Kernel",
+      "vendor": "linux",
+      "streams": [
+        "kernel"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "111": {
+      "name": "Access Control Server (ACS)",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_acs"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "112": {
+      "name": "Mediant Media Gateway",
+      "vendor": "AudioCodes",
+      "streams": [
+        "audiocodes_mediant"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "113": {
+      "name": "Auditd Logs",
+      "vendor": "Linux",
+      "streams": [
+        "auditd_logs"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "114": {
+      "name": "Linux PAM",
+      "vendor": "Linux",
+      "streams": [
+        "pam"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "115": {
+      "name": "HPE EFS",
+      "vendor": "HPE",
+      "streams": [
+        "hpe_efs"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "116": {
+      "name": "System Security Services Daemon (sssd)",
+      "vendor": "SSSD Project",
+      "streams": [
+        "sssd"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "117": {
+      "name": "Apache Tomcat",
+      "vendor": "Apache",
+      "streams": [
+        "tomcat_log"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "118": {
+      "name": "HAProxy Load Balancer",
+      "vendor": "HAProxy",
+      "streams": [
+        "haproxy"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "119": {
+      "name": "NXLog",
+      "vendor": "NXLog",
+      "streams": [],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "120": {
+      "name": "Akamai SIEM Integration",
+      "vendor": "Akamai",
+      "streams": [
+        "akamai"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "121": {
+      "name": "JavaMelody",
+      "vendor": "JavaMelody Project",
+      "streams": [
+        "javamelody"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "122": {
+      "name": "IBM i Powertech SIEM Agent",
+      "vendor": "IBM",
+      "streams": [
+        "powertech_interact"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "123": {
+      "name": "VMWare NSX Firewall",
+      "vendor": "VMWare",
+      "streams": [
+        "vmware_nsx_firewall"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "124": {
+      "name": "Netfilter ulogd",
+      "vendor": "linux",
+      "streams": [
+        "netfilter_ulogd"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "125": {
+      "name": "OpenVPN",
+      "vendor": "OpenVPN",
+      "streams": [
+        "openvpn"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "126": {
+      "name": "Tanium",
+      "vendor": "Tanium",
+      "streams": [
+        "tanium",
+        "tanium_tanium application server",
+        "tanium_detect",
+        "tanium_signals"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "127": {
+      "name": "McAfee Endpoint Security",
+      "vendor": "McAfee",
+      "streams": [
+        "mcafee_ens"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "128": {
+      "name": "Fortimail",
+      "vendor": "Fortinet",
+      "streams": [
+        "fortimail"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "129": {
+      "name": "PRTG Network Monitor",
+      "vendor": "Paessler",
+      "streams": [
+        "paessler_prtg"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "130": {
+      "name": "ESET Antivirus",
+      "vendor": "ESET",
+      "streams": [
+        "eset_remoteadministrator",
+        "eset"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "131": {
+      "name": "Infocyte Hunt",
+      "vendor": "Infocyte",
+      "streams": [
+        "infocyte",
+        "infocyte_hunt"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "132": {
+      "name": "Okta",
+      "vendor": "Okta",
+      "streams": [
+        "Okta",
+        "Okta Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "133": {
+      "name": "SecureCircle",
+      "vendor": "SecureCircle",
+      "streams": [
+        "securecircle"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "134": {
+      "name": "Mimecast",
+      "vendor": "Mimecast",
+      "streams": [
+        "mimecast",
+        "Mimecast Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "135": {
+      "name": "Cisco Meraki Firewall",
+      "vendor": "Cisco",
+      "streams": [
+        "meraki_flow",
+        "meraki_firewall",
+        "meraki_l7_firewall",
+        "meraki_vpn"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "136": {
+      "name": "SentinelOne",
+      "vendor": "SentinelOne",
+      "streams": [
+        "sentinelone",
+        "sentinelone_mgmt"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "144": {
+      "name": "Vulnerability Management",
+      "vendor": "Tenable",
+      "streams": [
+        "tenable_vulnerability_management",
+        "tenable_vulnerability_management_asset_inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "145": {
+      "name": "Noname Security",
+      "vendor": "Noname Security",
+      "streams": [
+        "noname"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "146": {
+      "name": "Automox",
+      "vendor": "Automox",
+      "streams": [
+        "automox",
+        "automox_asset_inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "147": {
+      "name": "Actifio",
+      "vendor": "Actifio",
+      "streams": [
+        "actifio",
+        "actifio_asset_inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "148": {
+      "name": "Cubro Network Visibility",
+      "vendor": "Cubro",
+      "streams": [
+        "cubro"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "149": {
+      "name": "PIX Firewall",
+      "vendor": "Cisco",
+      "streams": [
+        "cisco_pix_deny",
+        "cisco_pix"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "150": {
+      "name": "ProxySG",
+      "vendor": "Symantec",
+      "streams": [
+        "symantec_proxy_sg"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "151": {
+      "name": "Cortex XDR",
+      "vendor": "Palo Alto",
+      "streams": [
+        "Cortex Detection"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "152": {
+      "name": "Barracuda CloudGen Firewall",
+      "vendor": "Barracuda",
+      "streams": [
+        "barracuda_cloudgen"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "153": {
+      "name": "CyberArk EPM",
+      "vendor": "CyberArk",
+      "streams": [
+        "CyberArk EPM"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "155": {
+      "name": "ManageEngine ADManager",
+      "vendor": "ManageEngine",
+      "streams": [
+        "ad_audit_plus"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "156": {
+      "name": "VyOS",
+      "vendor": "VyOS",
+      "streams": [
+        "vyos"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "157": {
+      "name": "OPNsense Firewall",
+      "vendor": "OPNSense",
+      "streams": [
+        "opnsense_audit",
+        "opnsense_status"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "158": {
+      "name": "CyberArk Vault",
+      "vendor": "CyberArk",
+      "streams": [
+        "cyber-ark_vault"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "159": {
+      "name": "Barracuda ESS",
+      "vendor": "Barracuda",
+      "streams": [
+        "barracuda_ess"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001"
+      ]
+    },
+    "160": {
+      "name": "CASB",
+      "vendor": "ProofPoint",
+      "streams": [
+        "proofpoint_casb"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001"
+      ]
+    },
+    "161": {
+      "name": "Security Onion",
+      "vendor": "Security Onion Solutions, LLC",
+      "streams": [
+        "Security Onion"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "nist800171",
+        "csf",
+        "csc8",
+        "pci40",
+        "iso27001"
+      ]
+    },
+    "162": {
+      "name": "Stealthbits",
+      "vendor": "Netwrix",
+      "streams": [
+        "stealthbits technologies llc_stealthbits activity monitor"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "163": {
+      "name": "Taegis VDR",
+      "vendor": "Secureworks",
+      "streams": [
+        "taegis"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001"
+      ]
+    },
+    "164": {
+      "name": "Graph",
+      "vendor": "Microsoft",
+      "streams": [
+        "Microsoft Graph Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "psi40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "165": {
+      "name": "Datto RMM",
+      "vendor": "Datto",
+      "streams": [
+        "datto_network_manager_audit"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "166": {
+      "name": "Carson & Saint",
+      "vendor": "carson_saint",
+      "streams": [
+        "carson_saint",
+        "carson_saint_asset_inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "167": {
+      "name": "Duo",
+      "vendor": "Cisco",
+      "streams": [
+        "DUO Detection",
+        "DUO Ransomware",
+        "DUO Event",
+        "DUO Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "168": {
+      "name": "Druva",
+      "vendor": "Druva",
+      "streams": [
+        "druva"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf"
+      ]
+    },
+    "169": {
+      "name": "AppRiver",
+      "vendor": "Zix",
+      "streams": [
+        "zix_appriver"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "170": {
+      "name": "Netskope",
+      "vendor": "Netskope",
+      "streams": [
+        "netskope",
+        "Netskope Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "171": {
+      "name": "LimaCharlie",
+      "vendor": "LimaCharlie",
+      "streams": [
+        "limacharlie",
+        "LimaCharlie Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "soc2"
+      ]
+    },
+    "172": {
+      "name": "Harmony Email",
+      "vendor": "Checkpoint",
+      "streams": [
+        "checkpoint_harmony_email"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "csf",
+        "nist800171",
+        "csc8",
+        "pci40",
+        "iso27001",
+        "sco2"
+      ]
+    },
+    "173": {
+      "name": "Splunk",
+      "vendor": "Splunk",
+      "streams": [
+        "splunk",
+        "Splunk Asset Inventory"
+      ],
+      "frameworks": [
+        "csc",
+        "cmmc1",
+        "cmmc3",
+        "pci32",
+        "nist80053",
+        "nist800171",
+        "csf",
+        "csc8",
+        "pci40",
+        "iso27001"
+      ]
+    }
+  },
+  "stream_to_product": {
+    "stealthwatch high concern index": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "stealthwatch suspect data hoarding alarm": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "stealthwatch suspect data hoarding": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "stealthwatch suspect data loss": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "stealthwatch suspect quiet long flow": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "stealth_watch": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "lancope_stealthwatch": {
+      "product_id": 1,
+      "product_name": "Stealthwatch",
+      "vendor": "Cisco"
+    },
+    "qradar offense": {
+      "product_id": 2,
+      "product_name": "QRadar",
+      "vendor": "IBM"
+    },
+    "amp detection": {
+      "product_id": 3,
+      "product_name": "Advanced Malware Protection (AMP)",
+      "vendor": "Cisco"
+    },
+    "amp ransomware": {
+      "product_id": 3,
+      "product_name": "Advanced Malware Protection (AMP)",
+      "vendor": "Cisco"
+    },
+    "amp event": {
+      "product_id": 3,
+      "product_name": "Advanced Malware Protection (AMP)",
+      "vendor": "Cisco"
+    },
+    "amp asset inventory": {
+      "product_id": 3,
+      "product_name": "Advanced Malware Protection (AMP)",
+      "vendor": "Cisco"
+    },
+    "carbonblack protect detection": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "carbonblack ransomware detection": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "carbonblack respond detection": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "bit9": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "carbonblack_cbdefense_syslog_connector": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "carbonblack_analytics": {
+      "product_id": 5,
+      "product_name": "Carbon Black Protect/Defend",
+      "vendor": "Carbon Black"
+    },
+    "witfoo precinct": {
+      "product_id": 6,
+      "product_name": "Precinct",
+      "vendor": "WitFoo"
+    },
+    "crowdstrike detection": {
+      "product_id": 7,
+      "product_name": "Falcon",
+      "vendor": "Crowdstrike"
+    },
+    "crowdstrike ransomware detection": {
+      "product_id": 7,
+      "product_name": "Falcon",
+      "vendor": "Crowdstrike"
+    },
+    "crowdstrike_falcon": {
+      "product_id": 7,
+      "product_name": "Falcon",
+      "vendor": "Crowdstrike"
+    },
+    "crowdstrike asset inventory": {
+      "product_id": 7,
+      "product_name": "Falcon",
+      "vendor": "Crowdstrike"
+    },
+    "symantec_sep": {
+      "product_id": 8,
+      "product_name": "Symantec Endpoint Protection",
+      "vendor": "Symantec"
+    },
+    "symantec_sep_ransomware": {
+      "product_id": 8,
+      "product_name": "Symantec Endpoint Protection",
+      "vendor": "Symantec"
+    },
+    "symantec antivirus": {
+      "product_id": 8,
+      "product_name": "Symantec Endpoint Protection",
+      "vendor": "Symantec"
+    },
+    "symantec endpoint protection client": {
+      "product_id": 8,
+      "product_name": "Symantec Endpoint Protection",
+      "vendor": "Symantec"
+    },
+    "estreamer": {
+      "product_id": 9,
+      "product_name": "Firepower",
+      "vendor": "Cisco"
+    },
+    "firepower": {
+      "product_id": 9,
+      "product_name": "Firepower",
+      "vendor": "Cisco"
+    },
+    "cisco_firepower": {
+      "product_id": 9,
+      "product_name": "Firepower",
+      "vendor": "Cisco"
+    },
+    "sfims": {
+      "product_id": 9,
+      "product_name": "Firepower",
+      "vendor": "Cisco"
+    },
+    "cisco_asa_deny": {
+      "product_id": 17,
+      "product_name": "ASA Firewall",
+      "vendor": "Cisco"
+    },
+    "cisco_asa": {
+      "product_id": 17,
+      "product_name": "ASA Firewall",
+      "vendor": "Cisco"
+    },
+    "microsoft_windows_security_audit": {
+      "product_id": 43,
+      "product_name": "Windows Active Directory",
+      "vendor": "Microsoft"
+    },
+    "windows_security_audit": {
+      "product_id": 18,
+      "product_name": "Windows Logs",
+      "vendor": "Microsoft"
+    },
+    "windows_sysmon": {
+      "product_id": 18,
+      "product_name": "Windows Logs",
+      "vendor": "Microsoft"
+    },
+    "windows_task_scheduler": {
+      "product_id": 18,
+      "product_name": "Windows Logs",
+      "vendor": "Microsoft"
+    },
+    "websense": {
+      "product_id": 19,
+      "product_name": "Websense",
+      "vendor": "Websense"
+    },
+    "pan_firewall": {
+      "product_id": 20,
+      "product_name": "PAN NGFW",
+      "vendor": "Palo Alto"
+    },
+    "palo alto networks_pan-os": {
+      "product_id": 20,
+      "product_name": "PAN NGFW",
+      "vendor": "Palo Alto"
+    },
+    "checkpoint_firewall": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "checkpoint_smart1": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "check point_vpn-1 & firewall-1": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "check point_smartdefense": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "check point_log update": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "check point_security gateway/management": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "check point_syslog": {
+      "product_id": 21,
+      "product_name": "Checkpoint FW",
+      "vendor": "Checkpoint"
+    },
+    "tippingpoint_block": {
+      "product_id": 22,
+      "product_name": "Tippingpoint IPS",
+      "vendor": "Tippingpoint"
+    },
+    "fireeye_emps": {
+      "product_id": 23,
+      "product_name": "FireEye Email Security (EX Series)",
+      "vendor": "FireEye"
+    },
+    "trapx_tsoc": {
+      "product_id": 24,
+      "product_name": "TrapX",
+      "vendor": "TrapX"
+    },
+    "infoblox_nios": {
+      "product_id": 25,
+      "product_name": "InfoBlox",
+      "vendor": "InfoBlox"
+    },
+    "meraki": {
+      "product_id": 26,
+      "product_name": "Meraki",
+      "vendor": "Cisco"
+    },
+    "meraki_flow": {
+      "product_id": 135,
+      "product_name": "Cisco Meraki Firewall",
+      "vendor": "Cisco"
+    },
+    "meraki_firewall": {
+      "product_id": 135,
+      "product_name": "Cisco Meraki Firewall",
+      "vendor": "Cisco"
+    },
+    "meraki_l7_firewall": {
+      "product_id": 135,
+      "product_name": "Cisco Meraki Firewall",
+      "vendor": "Cisco"
+    },
+    "meraki_vpn": {
+      "product_id": 135,
+      "product_name": "Cisco Meraki Firewall",
+      "vendor": "Cisco"
+    },
+    "ncentral detection": {
+      "product_id": 27,
+      "product_name": "N-Central",
+      "vendor": "Solarwinds"
+    },
+    "suricata": {
+      "product_id": 28,
+      "product_name": "Suricata IDS",
+      "vendor": "Suricata"
+    },
+    "radware_waf": {
+      "product_id": 29,
+      "product_name": "Radware Appwall",
+      "vendor": "Radware"
+    },
+    "trend micro_deep security agent": {
+      "product_id": 30,
+      "product_name": "Trend Deep Security",
+      "vendor": "Trend Micro"
+    },
+    "trend micro_deep discovery inspector": {
+      "product_id": 30,
+      "product_name": "Trend Deep Security",
+      "vendor": "Trend Micro"
+    },
+    "zscaler_nssweblog": {
+      "product_id": 31,
+      "product_name": "zScaler NSS",
+      "vendor": "zScaler"
+    },
+    "proofpoint_protect": {
+      "product_id": 32,
+      "product_name": "Protect",
+      "vendor": "ProofPoint"
+    },
+    "proofpoint": {
+      "product_id": 32,
+      "product_name": "Protect",
+      "vendor": "ProofPoint"
+    },
+    "mist": {
+      "product_id": 33,
+      "product_name": "Mist Wireless",
+      "vendor": "Mist"
+    },
+    "cisco_ironport": {
+      "product_id": 34,
+      "product_name": "Cisco Ironport",
+      "vendor": "Cisco"
+    },
+    "cybereason cnc detection": {
+      "product_id": 35,
+      "product_name": "Cybereason",
+      "vendor": "Cybereason"
+    },
+    "cybereason ransomware detection": {
+      "product_id": 35,
+      "product_name": "Cybereason",
+      "vendor": "Cybereason"
+    },
+    "cybereason known_malware detection": {
+      "product_id": 35,
+      "product_name": "Cybereason",
+      "vendor": "Cybereason"
+    },
+    "cybereason malicious_process detection": {
+      "product_id": 35,
+      "product_name": "Cybereason",
+      "vendor": "Cybereason"
+    },
+    "cybereason process_injection detection": {
+      "product_id": 35,
+      "product_name": "Cybereason",
+      "vendor": "Cybereason"
+    },
+    "fortigate": {
+      "product_id": 36,
+      "product_name": "Fortigate",
+      "vendor": "Fortinet"
+    },
+    "fortinet_fortigate": {
+      "product_id": 36,
+      "product_name": "Fortigate",
+      "vendor": "Fortinet"
+    },
+    "vectra networks_x series": {
+      "product_id": 37,
+      "product_name": "Cognito",
+      "vendor": "Vectra Networks"
+    },
+    "opendns detection": {
+      "product_id": 38,
+      "product_name": "Umbrella",
+      "vendor": "Cisco"
+    },
+    "umbrella asset inventory": {
+      "product_id": 38,
+      "product_name": "Umbrella",
+      "vendor": "Cisco"
+    },
+    "ossec": {
+      "product_id": 39,
+      "product_name": "OSSEC",
+      "vendor": "OSSEC"
+    },
+    "malwarebytes_mbmc": {
+      "product_id": 40,
+      "product_name": "Malwarebytes Anti-Malware",
+      "vendor": "Malwarebytes"
+    },
+    "qualys vulnerability": {
+      "product_id": 42,
+      "product_name": "Vulnerability Management",
+      "vendor": "Qualys"
+    },
+    "microsoft-windows-security-auditing": {
+      "product_id": 43,
+      "product_name": "Windows Active Directory",
+      "vendor": "Microsoft"
+    },
+    "usermanagement": {
+      "product_id": 43,
+      "product_name": "Windows Active Directory",
+      "vendor": "Microsoft"
+    },
+    "symantec_dlp": {
+      "product_id": 44,
+      "product_name": "Symantec Data Loss Prevention",
+      "vendor": "Symantec"
+    },
+    "bro": {
+      "product_id": 45,
+      "product_name": "BRO IDS",
+      "vendor": "BRO IDS"
+    },
+    "varonis inc._datadvantage": {
+      "product_id": 46,
+      "product_name": "DatAdvantage",
+      "vendor": "Varonis"
+    },
+    "centrify": {
+      "product_id": 47,
+      "product_name": "Centrify",
+      "vendor": "Centrify"
+    },
+    "f5_asm": {
+      "product_id": 48,
+      "product_name": "ASM",
+      "vendor": "F5"
+    },
+    "f5": {
+      "product_id": 48,
+      "product_name": "ASM",
+      "vendor": "F5"
+    },
+    "imperva_secure_sphere": {
+      "product_id": 49,
+      "product_name": "SecureSphere",
+      "vendor": "Imperva"
+    },
+    "thycotic software_secret server": {
+      "product_id": 50,
+      "product_name": "Secret Server",
+      "vendor": "Thycotic"
+    },
+    "mcafee_web_gateway": {
+      "product_id": 51,
+      "product_name": "McAfee Web Gateway",
+      "vendor": "McAfee"
+    },
+    "cylance malware detection": {
+      "product_id": 52,
+      "product_name": "Cylance Protect",
+      "vendor": "Cylance"
+    },
+    "cylance trusted detection": {
+      "product_id": 52,
+      "product_name": "Cylance Protect",
+      "vendor": "Cylance"
+    },
+    "cylance pup detection": {
+      "product_id": 52,
+      "product_name": "Cylance Protect",
+      "vendor": "Cylance"
+    },
+    "cylance asset inventory": {
+      "product_id": 52,
+      "product_name": "Cylance Protect",
+      "vendor": "Cylance"
+    },
+    "wazuh inc._wazuh": {
+      "product_id": 54,
+      "product_name": "Wazuh",
+      "vendor": "Wazuh"
+    },
+    "nokia_netguard": {
+      "product_id": 55,
+      "product_name": "NetGuard",
+      "vendor": "Nokia"
+    },
+    "sophos detection": {
+      "product_id": 56,
+      "product_name": "Sophos Central",
+      "vendor": "Sophos"
+    },
+    "microsoft_ata": {
+      "product_id": 94,
+      "product_name": "Azure Security",
+      "vendor": "Microsoft"
+    },
+    "mcafee_epo": {
+      "product_id": 58,
+      "product_name": "McAfee ePolicy Orchestrator",
+      "vendor": "McAfee"
+    },
+    "cisco_wireless_lan_controller": {
+      "product_id": 59,
+      "product_name": "Cisco Wireless",
+      "vendor": "Cisco"
+    },
+    "juniper_srx": {
+      "product_id": 60,
+      "product_name": "Juniper FW",
+      "vendor": "Juniper"
+    },
+    "barracuda_waf": {
+      "product_id": 61,
+      "product_name": "Barracuda WAF",
+      "vendor": "Barracuda"
+    },
+    "apache_access_log": {
+      "product_id": 62,
+      "product_name": "Apache Web Server",
+      "vendor": "Apache"
+    },
+    "aws_guard_duty_findings": {
+      "product_id": 65,
+      "product_name": "Guard Duty",
+      "vendor": "Amazon Web Services"
+    },
+    "ericsson_security_manager": {
+      "product_id": 66,
+      "product_name": "Security Manager",
+      "vendor": "Ericsson"
+    },
+    "mojo_wireless": {
+      "product_id": 68,
+      "product_name": "Mojo Wireless",
+      "vendor": "Mojo"
+    },
+    "named": {
+      "product_id": 69,
+      "product_name": "NameD",
+      "vendor": "Linux"
+    },
+    "netscaler": {
+      "product_id": 70,
+      "product_name": "Netscaler",
+      "vendor": "Citrix"
+    },
+    "zix_email": {
+      "product_id": 75,
+      "product_name": "Secure Cloud",
+      "vendor": "Zix"
+    },
+    "gigamon_gigavue": {
+      "product_id": 76,
+      "product_name": "Gigamon GigaVUE",
+      "vendor": "Gigamon"
+    },
+    "pf_sense_firewall": {
+      "product_id": 81,
+      "product_name": "pfSense Firewall",
+      "vendor": "pfSense"
+    },
+    "sonic_wall_firewall": {
+      "product_id": 82,
+      "product_name": "SonicWall Firewall",
+      "vendor": "SonicWall"
+    },
+    "sonicwall_nsa 3600": {
+      "product_id": 82,
+      "product_name": "SonicWall Firewall",
+      "vendor": "SonicWall"
+    },
+    "senhasegura_pam": {
+      "product_id": 83,
+      "product_name": "Senhasegura PAM",
+      "vendor": "Senhasegura"
+    },
+    "spam_titan": {
+      "product_id": 84,
+      "product_name": "SpamTitan",
+      "vendor": "Titan"
+    },
+    "fireeye_mps": {
+      "product_id": 86,
+      "product_name": "FireEye Network Security (NX Series)",
+      "vendor": "FireEye"
+    },
+    "fireeye_hx": {
+      "product_id": 87,
+      "product_name": "FireEye Endpoint Security (HX Series)",
+      "vendor": "FireEye"
+    },
+    "fireeye_mas": {
+      "product_id": 88,
+      "product_name": "FireEye Malware Analysis (AX Series)",
+      "vendor": "FireEye"
+    },
+    "fireeye_fmps": {
+      "product_id": 89,
+      "product_name": "FireEye File Protect (FX Series)",
+      "vendor": "FireEye"
+    },
+    "fireeye_cms": {
+      "product_id": 90,
+      "product_name": "FireEye Central Management (CM Series)",
+      "vendor": "FireEye"
+    },
+    "fail2ban": {
+      "product_id": 91,
+      "product_name": "fail2ban",
+      "vendor": "Linux"
+    },
+    "aws_vpc_flow_log": {
+      "product_id": 92,
+      "product_name": "AWS VPC Security",
+      "vendor": "Amazon Web Services"
+    },
+    "aws_cloudtrail_events": {
+      "product_id": 93,
+      "product_name": "AWS Instance Backup",
+      "vendor": "Amazon Web Services"
+    },
+    "azure_security_alert": {
+      "product_id": 94,
+      "product_name": "Azure Security",
+      "vendor": "Microsoft"
+    },
+    "microsoft graph asset inventory": {
+      "product_id": 164,
+      "product_name": "Graph",
+      "vendor": "Microsoft"
+    },
+    "unifi_security_gateway": {
+      "product_id": 95,
+      "product_name": "Unify Security Gateway",
+      "vendor": "Ubiquity"
+    },
+    "deep instinct_d-appliance": {
+      "product_id": 96,
+      "product_name": "Advanced Endpoint Security",
+      "vendor": "Deep Instinct"
+    },
+    "deepinstinct": {
+      "product_id": 96,
+      "product_name": "Advanced Endpoint Security",
+      "vendor": "Deep Instinct"
+    },
+    "deep instinct asset inventory": {
+      "product_id": 96,
+      "product_name": "Advanced Endpoint Security",
+      "vendor": "Deep Instinct"
+    },
+    "roqos": {
+      "product_id": 97,
+      "product_name": "Roqos Core",
+      "vendor": "Roqos"
+    },
+    "hpe_nimble": {
+      "product_id": 98,
+      "product_name": "HPE Nimble",
+      "vendor": "HPE"
+    },
+    "ufw": {
+      "product_id": 99,
+      "product_name": "Uncomplicated Firewall (UFW)",
+      "vendor": "linux"
+    },
+    "cisco_ise": {
+      "product_id": 100,
+      "product_name": "Cisco ISE",
+      "vendor": "Cisco"
+    },
+    "tufin_st_policy": {
+      "product_id": 101,
+      "product_name": "Tufin SecureTrack",
+      "vendor": "Tufin"
+    },
+    "shibboleth": {
+      "product_id": 102,
+      "product_name": "Shibboleth IDP",
+      "vendor": "Shibboleth"
+    },
+    "att_arris_gateway": {
+      "product_id": 103,
+      "product_name": "AT&T Arris Gateway",
+      "vendor": "AT&T"
+    },
+    "vcenter": {
+      "product_id": 104,
+      "product_name": "VMWare VCenter",
+      "vendor": "VMWare"
+    },
+    "cisco_os": {
+      "product_id": 105,
+      "product_name": "Cisco Network Operating System",
+      "vendor": "Cisco"
+    },
+    "mcafee_nsp": {
+      "product_id": 106,
+      "product_name": "McAfee Network Security",
+      "vendor": "McAfee"
+    },
+    "pulse_secure": {
+      "product_id": 107,
+      "product_name": "Pulse Secure",
+      "vendor": "Pulse"
+    },
+    "beyond_trust": {
+      "product_id": 108,
+      "product_name": "Beyond Trust",
+      "vendor": "Beyond Trust"
+    },
+    "beyond_trust_ad_bridge": {
+      "product_id": 108,
+      "product_name": "Beyond Trust",
+      "vendor": "Beyond Trust"
+    },
+    "cisco_wsa": {
+      "product_id": 109,
+      "product_name": "Web Security Appliance (WSA)",
+      "vendor": "Cisco"
+    },
+    "kernel": {
+      "product_id": 110,
+      "product_name": "Kernel",
+      "vendor": "linux"
+    },
+    "cisco_acs": {
+      "product_id": 111,
+      "product_name": "Access Control Server (ACS)",
+      "vendor": "Cisco"
+    },
+    "audiocodes_mediant": {
+      "product_id": 112,
+      "product_name": "Mediant Media Gateway",
+      "vendor": "AudioCodes"
+    },
+    "auditd_logs": {
+      "product_id": 113,
+      "product_name": "Auditd Logs",
+      "vendor": "Linux"
+    },
+    "pam": {
+      "product_id": 114,
+      "product_name": "Linux PAM",
+      "vendor": "Linux"
+    },
+    "hpe_efs": {
+      "product_id": 115,
+      "product_name": "HPE EFS",
+      "vendor": "HPE"
+    },
+    "sssd": {
+      "product_id": 116,
+      "product_name": "System Security Services Daemon (sssd)",
+      "vendor": "SSSD Project"
+    },
+    "tomcat_log": {
+      "product_id": 117,
+      "product_name": "Apache Tomcat",
+      "vendor": "Apache"
+    },
+    "haproxy": {
+      "product_id": 118,
+      "product_name": "HAProxy Load Balancer",
+      "vendor": "HAProxy"
+    },
+    "akamai": {
+      "product_id": 120,
+      "product_name": "Akamai SIEM Integration",
+      "vendor": "Akamai"
+    },
+    "javamelody": {
+      "product_id": 121,
+      "product_name": "JavaMelody",
+      "vendor": "JavaMelody Project"
+    },
+    "powertech_interact": {
+      "product_id": 122,
+      "product_name": "IBM i Powertech SIEM Agent",
+      "vendor": "IBM"
+    },
+    "vmware_nsx_firewall": {
+      "product_id": 123,
+      "product_name": "VMWare NSX Firewall",
+      "vendor": "VMWare"
+    },
+    "netfilter_ulogd": {
+      "product_id": 124,
+      "product_name": "Netfilter ulogd",
+      "vendor": "linux"
+    },
+    "openvpn": {
+      "product_id": 125,
+      "product_name": "OpenVPN",
+      "vendor": "OpenVPN"
+    },
+    "tanium": {
+      "product_id": 126,
+      "product_name": "Tanium",
+      "vendor": "Tanium"
+    },
+    "tanium_tanium application server": {
+      "product_id": 126,
+      "product_name": "Tanium",
+      "vendor": "Tanium"
+    },
+    "tanium_detect": {
+      "product_id": 126,
+      "product_name": "Tanium",
+      "vendor": "Tanium"
+    },
+    "tanium_signals": {
+      "product_id": 126,
+      "product_name": "Tanium",
+      "vendor": "Tanium"
+    },
+    "mcafee_ens": {
+      "product_id": 127,
+      "product_name": "McAfee Endpoint Security",
+      "vendor": "McAfee"
+    },
+    "fortimail": {
+      "product_id": 128,
+      "product_name": "Fortimail",
+      "vendor": "Fortinet"
+    },
+    "paessler_prtg": {
+      "product_id": 129,
+      "product_name": "PRTG Network Monitor",
+      "vendor": "Paessler"
+    },
+    "eset_remoteadministrator": {
+      "product_id": 130,
+      "product_name": "ESET Antivirus",
+      "vendor": "ESET"
+    },
+    "eset": {
+      "product_id": 130,
+      "product_name": "ESET Antivirus",
+      "vendor": "ESET"
+    },
+    "infocyte": {
+      "product_id": 131,
+      "product_name": "Infocyte Hunt",
+      "vendor": "Infocyte"
+    },
+    "infocyte_hunt": {
+      "product_id": 131,
+      "product_name": "Infocyte Hunt",
+      "vendor": "Infocyte"
+    },
+    "okta": {
+      "product_id": 132,
+      "product_name": "Okta",
+      "vendor": "Okta"
+    },
+    "okta asset inventory": {
+      "product_id": 132,
+      "product_name": "Okta",
+      "vendor": "Okta"
+    },
+    "securecircle": {
+      "product_id": 133,
+      "product_name": "SecureCircle",
+      "vendor": "SecureCircle"
+    },
+    "mimecast": {
+      "product_id": 134,
+      "product_name": "Mimecast",
+      "vendor": "Mimecast"
+    },
+    "mimecast asset inventory": {
+      "product_id": 134,
+      "product_name": "Mimecast",
+      "vendor": "Mimecast"
+    },
+    "sentinelone": {
+      "product_id": 136,
+      "product_name": "SentinelOne",
+      "vendor": "SentinelOne"
+    },
+    "sentinelone_mgmt": {
+      "product_id": 136,
+      "product_name": "SentinelOne",
+      "vendor": "SentinelOne"
+    },
+    "tenable_vulnerability_management": {
+      "product_id": 144,
+      "product_name": "Vulnerability Management",
+      "vendor": "Tenable"
+    },
+    "tenable_vulnerability_management_asset_inventory": {
+      "product_id": 144,
+      "product_name": "Vulnerability Management",
+      "vendor": "Tenable"
+    },
+    "noname": {
+      "product_id": 145,
+      "product_name": "Noname Security",
+      "vendor": "Noname Security"
+    },
+    "automox": {
+      "product_id": 146,
+      "product_name": "Automox",
+      "vendor": "Automox"
+    },
+    "automox_asset_inventory": {
+      "product_id": 146,
+      "product_name": "Automox",
+      "vendor": "Automox"
+    },
+    "actifio": {
+      "product_id": 147,
+      "product_name": "Actifio",
+      "vendor": "Actifio"
+    },
+    "actifio_asset_inventory": {
+      "product_id": 147,
+      "product_name": "Actifio",
+      "vendor": "Actifio"
+    },
+    "cubro": {
+      "product_id": 148,
+      "product_name": "Cubro Network Visibility",
+      "vendor": "Cubro"
+    },
+    "cisco_pix_deny": {
+      "product_id": 149,
+      "product_name": "PIX Firewall",
+      "vendor": "Cisco"
+    },
+    "cisco_pix": {
+      "product_id": 149,
+      "product_name": "PIX Firewall",
+      "vendor": "Cisco"
+    },
+    "symantec_proxy_sg": {
+      "product_id": 150,
+      "product_name": "ProxySG",
+      "vendor": "Symantec"
+    },
+    "cortex detection": {
+      "product_id": 151,
+      "product_name": "Cortex XDR",
+      "vendor": "Palo Alto"
+    },
+    "barracuda_cloudgen": {
+      "product_id": 152,
+      "product_name": "Barracuda CloudGen Firewall",
+      "vendor": "Barracuda"
+    },
+    "cyberark epm": {
+      "product_id": 153,
+      "product_name": "CyberArk EPM",
+      "vendor": "CyberArk"
+    },
+    "ad_audit_plus": {
+      "product_id": 155,
+      "product_name": "ManageEngine ADManager",
+      "vendor": "ManageEngine"
+    },
+    "vyos": {
+      "product_id": 156,
+      "product_name": "VyOS",
+      "vendor": "VyOS"
+    },
+    "opnsense_audit": {
+      "product_id": 157,
+      "product_name": "OPNsense Firewall",
+      "vendor": "OPNSense"
+    },
+    "opnsense_status": {
+      "product_id": 157,
+      "product_name": "OPNsense Firewall",
+      "vendor": "OPNSense"
+    },
+    "cyber-ark_vault": {
+      "product_id": 158,
+      "product_name": "CyberArk Vault",
+      "vendor": "CyberArk"
+    },
+    "barracuda_ess": {
+      "product_id": 159,
+      "product_name": "Barracuda ESS",
+      "vendor": "Barracuda"
+    },
+    "proofpoint_casb": {
+      "product_id": 160,
+      "product_name": "CASB",
+      "vendor": "ProofPoint"
+    },
+    "security onion": {
+      "product_id": 161,
+      "product_name": "Security Onion",
+      "vendor": "Security Onion Solutions, LLC"
+    },
+    "stealthbits technologies llc_stealthbits activity monitor": {
+      "product_id": 162,
+      "product_name": "Stealthbits",
+      "vendor": "Netwrix"
+    },
+    "taegis": {
+      "product_id": 163,
+      "product_name": "Taegis VDR",
+      "vendor": "Secureworks"
+    },
+    "datto_network_manager_audit": {
+      "product_id": 165,
+      "product_name": "Datto RMM",
+      "vendor": "Datto"
+    },
+    "carson_saint": {
+      "product_id": 166,
+      "product_name": "Carson & Saint",
+      "vendor": "carson_saint"
+    },
+    "carson_saint_asset_inventory": {
+      "product_id": 166,
+      "product_name": "Carson & Saint",
+      "vendor": "carson_saint"
+    },
+    "duo detection": {
+      "product_id": 167,
+      "product_name": "Duo",
+      "vendor": "Cisco"
+    },
+    "duo ransomware": {
+      "product_id": 167,
+      "product_name": "Duo",
+      "vendor": "Cisco"
+    },
+    "duo event": {
+      "product_id": 167,
+      "product_name": "Duo",
+      "vendor": "Cisco"
+    },
+    "duo asset inventory": {
+      "product_id": 167,
+      "product_name": "Duo",
+      "vendor": "Cisco"
+    },
+    "druva": {
+      "product_id": 168,
+      "product_name": "Druva",
+      "vendor": "Druva"
+    },
+    "zix_appriver": {
+      "product_id": 169,
+      "product_name": "AppRiver",
+      "vendor": "Zix"
+    },
+    "netskope": {
+      "product_id": 170,
+      "product_name": "Netskope",
+      "vendor": "Netskope"
+    },
+    "netskope asset inventory": {
+      "product_id": 170,
+      "product_name": "Netskope",
+      "vendor": "Netskope"
+    },
+    "limacharlie": {
+      "product_id": 171,
+      "product_name": "LimaCharlie",
+      "vendor": "LimaCharlie"
+    },
+    "limacharlie asset inventory": {
+      "product_id": 171,
+      "product_name": "LimaCharlie",
+      "vendor": "LimaCharlie"
+    },
+    "checkpoint_harmony_email": {
+      "product_id": 172,
+      "product_name": "Harmony Email",
+      "vendor": "Checkpoint"
+    },
+    "splunk": {
+      "product_id": 173,
+      "product_name": "Splunk",
+      "vendor": "Splunk"
+    },
+    "splunk asset inventory": {
+      "product_id": 173,
+      "product_name": "Splunk",
+      "vendor": "Splunk"
+    }
+  },
+  "lead_rules": [
+    {
+      "id": 1,
+      "description": "Stealthwatch High Concern Index Alarm",
+      "criteria": "streamName = \"Stealthwatch High Concern Index\"",
+      "client_set_id": 1001,
+      "server_set_id": 1005,
+      "product_id": 1
+    },
+    {
+      "id": 2,
+      "description": "Stealthwatch Suspect Data Hoarding Alarm",
+      "criteria": "streamName = \"Stealthwatch Suspect Data Hoarding\"",
+      "client_set_id": 1002,
+      "server_set_id": 1006,
+      "product_id": 1
+    },
+    {
+      "id": 3,
+      "description": "Stealthwatch Suspect Data Loss Alarm",
+      "criteria": "streamName = \"Stealthwatch Suspect Data Loss\"",
+      "client_set_id": 1003,
+      "server_set_id": 1007,
+      "product_id": 1
+    },
+    {
+      "id": 4,
+      "description": "Stealthwatch Suspect Quient Long Flow",
+      "criteria": "streamName = \"Stealthwatch Suspect Quiet Long Flow\"",
+      "client_set_id": 1009,
+      "server_set_id": 1008,
+      "product_id": 1
+    },
+    {
+      "id": 5,
+      "description": "Stealthwatch High Concern Index Alarm",
+      "criteria": "streamName = \"stealth_watch\" AND ruleName = \"High Concern Index\"",
+      "client_set_id": 1001,
+      "server_set_id": 1005,
+      "product_id": 1
+    },
+    {
+      "id": 6,
+      "description": "Stealthwatch High Total Traffic Alarm",
+      "criteria": "streamName = \"stealth_watch\" AND ruleName = \"High Total Traffic\"",
+      "client_set_id": 1001,
+      "server_set_id": 1005,
+      "product_id": 1
+    },
+    {
+      "id": 7,
+      "description": "Stealthwatch Command & Control Alarm",
+      "criteria": "streamName = \"stealth_watch\" AND ruleName = \"Command & Control\"",
+      "client_set_id": 1001,
+      "server_set_id": 1005,
+      "product_id": 1
+    },
+    {
+      "id": 8,
+      "description": "QRadar Offense",
+      "criteria": "streamName = \"QRadar Offense\"",
+      "client_set_id": 2001,
+      "server_set_id": 2005,
+      "product_id": 2
+    },
+    {
+      "id": 9,
+      "description": "AMP Detection",
+      "criteria": "streamName = \"AMP Detection\"",
+      "client_set_id": 3005,
+      "server_set_id": 3001,
+      "product_id": 3
+    },
+    {
+      "id": 10,
+      "description": "AMP Ransomware Detection",
+      "criteria": "streamName = \"AMP Ransomware\"",
+      "client_set_id": 3019,
+      "server_set_id": 3026,
+      "product_id": 3
+    },
+    {
+      "id": 11,
+      "description": "FireEye NX Malware Detection",
+      "criteria": "streamName = \"fireeye_mps\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 86001,
+      "server_set_id": 86005,
+      "product_id": 86
+    },
+    {
+      "id": 12,
+      "description": "FireEye NX Callback Detection",
+      "criteria": "streamName = \"fireeye_mps\" AND tags CONTAINS \"malware-callback\"",
+      "client_set_id": 86009,
+      "server_set_id": 86008,
+      "product_id": 86
+    },
+    {
+      "id": 13,
+      "description": "FireEye NX Web Infection Detection",
+      "criteria": "streamName = \"fireeye_mps\" AND tags CONTAINS \"web-infection\"",
+      "client_set_id": 86024,
+      "server_set_id": 86022,
+      "product_id": 86
+    },
+    {
+      "id": 14,
+      "description": "FireEye NX IPS Event",
+      "criteria": "streamName = \"fireeye_mps\" AND tags CONTAINS \"ips-event\"",
+      "client_set_id": 86001,
+      "server_set_id": 86005,
+      "product_id": 86
+    },
+    {
+      "id": 15,
+      "description": "FireEye HX Malware Detection",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 87005,
+      "server_set_id": 87001,
+      "product_id": 87
+    },
+    {
+      "id": 16,
+      "description": "FireEye HX Callback Detection",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"malware-callback\"",
+      "client_set_id": 87009,
+      "server_set_id": 87008,
+      "product_id": 87
+    },
+    {
+      "id": 17,
+      "description": "FireEye HX Web Infection Detection",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"web-infection\"",
+      "client_set_id": 87024,
+      "server_set_id": 87022,
+      "product_id": 87
+    },
+    {
+      "id": 18,
+      "description": "FireEye HX ExD Hit",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"ExD Hit Found\"",
+      "client_set_id": 87005,
+      "server_set_id": 87001,
+      "product_id": 87
+    },
+    {
+      "id": 19,
+      "description": "FireEye HX Malware Hit",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"Malware Hit Found\"",
+      "client_set_id": 87005,
+      "server_set_id": 87001,
+      "product_id": 87
+    },
+    {
+      "id": 20,
+      "description": "FireEye HX Infection Match",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"infection-match\"",
+      "client_set_id": 87005,
+      "server_set_id": 87001,
+      "product_id": 87
+    },
+    {
+      "id": 21,
+      "description": "FireEye HX Domain Match",
+      "criteria": "streamName = \"fireeye_hx\" AND tags CONTAINS \"domain-match\"",
+      "client_set_id": 87005,
+      "server_set_id": 87001,
+      "product_id": 87
+    },
+    {
+      "id": 22,
+      "description": "FireEye AX Detection",
+      "criteria": "streamName = \"fireeye_mas\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 88005,
+      "server_set_id": 88001,
+      "product_id": 88
+    },
+    {
+      "id": 23,
+      "description": "FireEye FX Detection",
+      "criteria": "streamName = \"fireeye_fmps\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 89005,
+      "server_set_id": 89001,
+      "product_id": 89
+    },
+    {
+      "id": 24,
+      "description": "FireEye CMS Detection",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 90005,
+      "server_set_id": 90001,
+      "product_id": 90
+    },
+    {
+      "id": 25,
+      "description": "FireEye CMS Callback Detection",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"malware-callback\"",
+      "client_set_id": 90009,
+      "server_set_id": 90008,
+      "product_id": 90
+    },
+    {
+      "id": 26,
+      "description": "FireEye CMS Web Infection Detection",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"web-infection\"",
+      "client_set_id": 90024,
+      "server_set_id": 90022,
+      "product_id": 90
+    },
+    {
+      "id": 27,
+      "description": "FireEye CMS IPS Event",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"ips-event\"",
+      "client_set_id": 90001,
+      "server_set_id": 90005,
+      "product_id": 90
+    },
+    {
+      "id": 28,
+      "description": "FireEye CMS Infection Match",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"infection-match\"",
+      "client_set_id": 90005,
+      "server_set_id": 90001,
+      "product_id": 90
+    },
+    {
+      "id": 29,
+      "description": "FireEye CMS Domain Match",
+      "criteria": "streamName = \"fireeye_cms\" AND tags CONTAINS \"domain-match\"",
+      "client_set_id": 90005,
+      "server_set_id": 90001,
+      "product_id": 90
+    },
+    {
+      "id": 30,
+      "description": "FireEye Email Security Alarm",
+      "criteria": "streamName = \"fireeye_emps\" AND tags CONTAINS \"malware-object\"",
+      "client_set_id": 23005,
+      "server_set_id": 23001,
+      "product_id": 23
+    },
+    {
+      "id": 31,
+      "description": "FireEye Email Security Ransomware Alarm",
+      "criteria": "streamName = \"fireeye_emps\" AND tags CONTAINS \"ransomware\"",
+      "client_set_id": 23019,
+      "server_set_id": 23026,
+      "product_id": 23
+    },
+    {
+      "id": 32,
+      "description": "CarbonBlack Protect Detection",
+      "criteria": "streamName = \"CarbonBlack Protect Detection\"",
+      "client_set_id": 5005,
+      "server_set_id": 5001,
+      "product_id": 5
+    },
+    {
+      "id": 33,
+      "description": "CarbonBlack Ransomware Detection",
+      "criteria": "streamName = \"CarbonBlack Ransomware Detection\"",
+      "client_set_id": 5019,
+      "server_set_id": 5026,
+      "product_id": 5
+    },
+    {
+      "id": 34,
+      "description": "CarbonBlack Respond Detection",
+      "criteria": "streamName = \"CarbonBlack Respond Detection\"",
+      "client_set_id": 5005,
+      "server_set_id": 5001,
+      "product_id": 5
+    },
+    {
+      "id": 35,
+      "description": "CarbonBlack Bit9 Detection",
+      "criteria": "streamName = \"bit9\" AND action LIKE \"%block%\"",
+      "client_set_id": 5005,
+      "server_set_id": 5001,
+      "product_id": 5
+    },
+    {
+      "id": 36,
+      "description": "CarbonBlack Defend Detection",
+      "criteria": "streamName = \"carbonblack_cbdefense_syslog_connector\" AND severityCode < 5",
+      "client_set_id": 5005,
+      "server_set_id": 5001,
+      "product_id": 5
+    },
+    {
+      "id": 37,
+      "description": "Crowdstrike Detection",
+      "criteria": "streamName = \"Crowdstrike Detection\"",
+      "client_set_id": 7005,
+      "server_set_id": 7001,
+      "product_id": 7
+    },
+    {
+      "id": 38,
+      "description": "Crowdstrike Ransomware Detection",
+      "criteria": "streamName = \"Crowdstrike Ransomware Detection\"",
+      "client_set_id": 7019,
+      "server_set_id": 7026,
+      "product_id": 7
+    },
+    {
+      "id": 39,
+      "description": "Crowdstrike Detection",
+      "criteria": "streamName = \"crowdstrike_falcon\" AND action = \"UserLogonFailed\"",
+      "client_set_id": 7005,
+      "server_set_id": 7001,
+      "product_id": 7
+    },
+    {
+      "id": 40,
+      "description": "Crowdstrike Detection",
+      "criteria": "streamName = \"crowdstrike_falcon\" AND action = \"ProcessBlocked\"",
+      "client_set_id": 7005,
+      "server_set_id": 7001,
+      "product_id": 7
+    },
+    {
+      "id": 41,
+      "description": "Crowdstrike Detection",
+      "criteria": "streamName = \"crowdstrike_falcon\" AND action = \"QuarantineActionResult\"",
+      "client_set_id": 7005,
+      "server_set_id": 7001,
+      "product_id": 7
+    },
+    {
+      "id": 42,
+      "description": "Cisco Wireless Detection",
+      "criteria": "streamName = \"cisco_wireless_lan_controller\" AND severityCode < 5",
+      "client_set_id": 59001,
+      "server_set_id": 59005,
+      "product_id": 59
+    },
+    {
+      "id": 43,
+      "description": "Cisco Wireless Detection",
+      "criteria": "streamName = \"cisco_wireless_lan_controller\" AND severityLabel = \"High\"",
+      "client_set_id": 59001,
+      "server_set_id": 59005,
+      "product_id": 59
+    },
+    {
+      "id": 44,
+      "description": "Cisco Wireless Detection",
+      "criteria": "streamName = \"cisco_wireless_lan_controller\" AND action = \"block\"",
+      "client_set_id": 59001,
+      "server_set_id": 59005,
+      "product_id": 59
+    },
+    {
+      "id": 45,
+      "description": "Cisco Wireless Detection",
+      "criteria": "streamName = \"cisco_wireless_lan_controller\" AND messageType = \"auth_failure\"",
+      "client_set_id": 59001,
+      "server_set_id": 59005,
+      "product_id": 59
+    },
+    {
+      "id": 46,
+      "description": "Cybereason CNC Detection",
+      "criteria": "streamName = \"Cybereason CNC Detection\"",
+      "client_set_id": 35009,
+      "server_set_id": 35008,
+      "product_id": 35
+    },
+    {
+      "id": 47,
+      "description": "Cybereason KNOWN_MALWARE Detection",
+      "criteria": "streamName = \"Cybereason KNOWN_MALWARE Detection\"",
+      "client_set_id": 35005,
+      "server_set_id": 35001,
+      "product_id": 35
+    },
+    {
+      "id": 48,
+      "description": "Cybereason MALICIOUS_PROCESS Detection",
+      "criteria": "streamName = \"Cybereason  MALICIOUS_PROCESS Detection\"",
+      "client_set_id": 35005,
+      "server_set_id": 35001,
+      "product_id": 35
+    },
+    {
+      "id": 49,
+      "description": "Cybereason PROCESS_INJECTION Detection",
+      "criteria": "streamName = \"Cybereason PROCESS_INJECTION Detection\"",
+      "client_set_id": 35005,
+      "server_set_id": 35001,
+      "product_id": 35
+    },
+    {
+      "id": 50,
+      "description": "Cybereason RANSOMWARE Detection",
+      "criteria": "streamName = \"Cybereason RANSOMWARE Detection\"",
+      "client_set_id": 35019,
+      "server_set_id": 35026,
+      "product_id": 35
+    },
+    {
+      "id": 51,
+      "description": "Cybereason PHISHING Detection",
+      "criteria": "streamName = \"Cybereason PHISHING Detection\"",
+      "client_set_id": 35023,
+      "server_set_id": 35015,
+      "product_id": 35
+    },
+    {
+      "id": 52,
+      "description": "NCentral Detection",
+      "criteria": "streamName = \"NCentral Detection\"",
+      "client_set_id": 27005,
+      "server_set_id": 27001,
+      "product_id": 27
+    },
+    {
+      "id": 53,
+      "description": "Symantec Endpoint Protection Alarm",
+      "criteria": "streamName = \"symantec_sep\" AND severityCode < 5",
+      "client_set_id": 8001,
+      "server_set_id": 8005,
+      "product_id": 8
+    },
+    {
+      "id": 54,
+      "description": "Symantec Endpoint Protection Ransomware Alarm",
+      "criteria": "streamName = \"symantec_sep_ransomware\"",
+      "client_set_id": 8019,
+      "server_set_id": 8026,
+      "product_id": 8
+    },
+    {
+      "id": 55,
+      "description": "Symantec Endpoint Protection Alarm",
+      "criteria": "streamName = \"symantec antivirus\" AND severityCode < 5",
+      "client_set_id": 8001,
+      "server_set_id": 8005,
+      "product_id": 8
+    },
+    {
+      "id": 56,
+      "description": "Symantec Endpoint Protection Alarm",
+      "criteria": "streamName = \"symantec endpoint protection client\" AND severityCode < 5",
+      "client_set_id": 8001,
+      "server_set_id": 8005,
+      "product_id": 8
+    },
+    {
+      "id": 57,
+      "description": "Firepower Alarm",
+      "criteria": "streamName = \"estreamer\" AND severityCode < 5",
+      "client_set_id": 9001,
+      "server_set_id": 9005,
+      "product_id": 9
+    },
+    {
+      "id": 58,
+      "description": "ASA Deny",
+      "criteria": "streamName = \"cisco_asa\" AND action = \"deny\"",
+      "client_set_id": 17001,
+      "server_set_id": 17005,
+      "product_id": 17
+    },
+    {
+      "id": 59,
+      "description": "ASA Deny",
+      "criteria": "streamName = \"cisco_asa\" AND action = \"block\"",
+      "client_set_id": 17001,
+      "server_set_id": 17005,
+      "product_id": 17
+    },
+    {
+      "id": 60,
+      "description": "Websense Security Alarm",
+      "criteria": "streamName = \"websense\" AND severityCode < 5",
+      "client_set_id": 19001,
+      "server_set_id": 19005,
+      "product_id": 19
+    },
+    {
+      "id": 61,
+      "description": "Windows Security Alarm",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND severityCode < 5",
+      "client_set_id": 18001,
+      "server_set_id": 18005,
+      "product_id": 18
+    },
+    {
+      "id": 62,
+      "description": "Windows Security Alarm",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND severityCode < 5",
+      "client_set_id": 18001,
+      "server_set_id": 18005,
+      "product_id": 18
+    },
+    {
+      "id": 63,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"pan_firewall\" AND severityCode < 5",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 64,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"palo alto networks_pan-os\" AND severityCode < 5",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 65,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"pan_firewall\" AND action = \"block\"",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 66,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"palo alto networks_pan-os\" AND action = \"block\"",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 67,
+      "description": "Palo Alto Threat Alarm",
+      "criteria": "streamName = \"palo alto networks_pan-os\" AND messageType = \"THREAT\" AND severityCode < 5",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 68,
+      "description": "Palo Alto Threat Alarm",
+      "criteria": "streamName = \"palo alto networks_pan-os\" AND tags CONTAINS \"reason:threat\" AND severityCode < 5",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 69,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"pan_firewall\" AND action = \"deny\"",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 70,
+      "description": "Palo Alto FW Alarm",
+      "criteria": "streamName = \"palo alto networks_pan-os\" AND action = \"deny\"",
+      "client_set_id": 20001,
+      "server_set_id": 20005,
+      "product_id": 20
+    },
+    {
+      "id": 71,
+      "description": "Checkpoint Alarm",
+      "criteria": "streamName LIKE \"checkpoint\" AND severityCode < 4",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 72,
+      "description": "Checkpoint Drop Action",
+      "criteria": "streamName LIKE \"check point\" AND action = \"Drop\"",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 73,
+      "description": "Checkpoint Alarm",
+      "criteria": "streamName LIKE \"check point\" AND severityCode < 4",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 74,
+      "description": "Checkpoint Reject Action",
+      "criteria": "streamName LIKE \"check point\" AND action = \"Reject\"",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 75,
+      "description": "Checkpoint Alarm",
+      "criteria": "streamName LIKE \"checkpoint\" AND severityCode < 4",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 76,
+      "description": "Checkpoint Drop Action",
+      "criteria": "streamName LIKE \"check point\" AND action = \"block\"",
+      "client_set_id": 21001,
+      "server_set_id": 21005,
+      "product_id": 21
+    },
+    {
+      "id": 77,
+      "description": "Tippingpoint Block",
+      "criteria": "streamName = \"tippingpoint_block\"",
+      "client_set_id": 22001,
+      "server_set_id": 22005,
+      "product_id": 22
+    },
+    {
+      "id": 78,
+      "description": "TrapX TSOC Alarm",
+      "criteria": "streamName = \"trapx_tsoc\"",
+      "client_set_id": 24001,
+      "server_set_id": 24005,
+      "product_id": 24
+    },
+    {
+      "id": 79,
+      "description": "Infoblox NIOS Alarm",
+      "criteria": "streamName = \"infoblox_nios\"",
+      "client_set_id": 25001,
+      "server_set_id": 25005,
+      "product_id": 25
+    },
+    {
+      "id": 80,
+      "description": "Meraki IDS Alarm",
+      "criteria": "streamName = \"meraki\" AND messageType = \"ids\"",
+      "client_set_id": 26001,
+      "server_set_id": 26005,
+      "product_id": 26
+    },
+    {
+      "id": 81,
+      "description": "Meraki Deny Alarm",
+      "criteria": "streamName = \"meraki\" AND action = \"deny\"",
+      "client_set_id": 26001,
+      "server_set_id": 26005,
+      "product_id": 26
+    },
+    {
+      "id": 82,
+      "description": "Meraki Deny Alarm",
+      "criteria": "streamName = \"meraki\" AND action = \"block\"",
+      "client_set_id": 26001,
+      "server_set_id": 26005,
+      "product_id": 26
+    },
+    {
+      "id": 83,
+      "description": "Suricata IDS Alarm",
+      "criteria": "streamName = \"suricata\"",
+      "client_set_id": 28001,
+      "server_set_id": 28005,
+      "product_id": 28
+    },
+    {
+      "id": 84,
+      "description": "Radware Appwall Alarm",
+      "criteria": "streamName = \"radware_waf\"",
+      "client_set_id": 29001,
+      "server_set_id": 29005,
+      "product_id": 29
+    },
+    {
+      "id": 85,
+      "description": "Trend Micro Deep Security Alarm",
+      "criteria": "streamName = \"trend micro_deep security agent\" AND severityCode < 5",
+      "client_set_id": 30005,
+      "server_set_id": 30001,
+      "product_id": 30
+    },
+    {
+      "id": 86,
+      "description": "Trend Micro Deep Security Alarm",
+      "criteria": "streamName = \"trend micro_deep discovery inspector\" AND severityCode < 5",
+      "client_set_id": 30005,
+      "server_set_id": 30001,
+      "product_id": 30
+    },
+    {
+      "id": 87,
+      "description": "Trend Micro Deep Security Alarm",
+      "criteria": "streamName = \"trend micro_deep security manager\" AND severityCode < 5",
+      "client_set_id": 30005,
+      "server_set_id": 30001,
+      "product_id": 30
+    },
+    {
+      "id": 88,
+      "description": "zScaler NSS Block",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND action = \"Blocked\"",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 89,
+      "description": "zScaler NSS Block",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND action = \"blocked\"",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 90,
+      "description": "ZScaler Detection",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND severityCode < 5",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 91,
+      "description": "ZScaler Detection",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND severityLabel = \"High\"",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 92,
+      "description": "ZScaler Detection",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND action = \"block\"",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 93,
+      "description": "ZScaler Detection",
+      "criteria": "streamName = \"zscaler_nssweblog\" AND messageType = \"auth_failure\"",
+      "client_set_id": 31001,
+      "server_set_id": 31005,
+      "product_id": 31
+    },
+    {
+      "id": 94,
+      "description": "ProofPoint Protect Detection",
+      "criteria": "streamName = \"proofpoint_protect\"",
+      "client_set_id": 32023,
+      "server_set_id": 32015,
+      "product_id": 32
+    },
+    {
+      "id": 95,
+      "description": "Cisco Ironport Detection",
+      "criteria": "streamName = \"cisco_ironport\" AND severityCode < 5",
+      "client_set_id": 34023,
+      "server_set_id": 34015,
+      "product_id": 34
+    },
+    {
+      "id": 96,
+      "description": "Mist Wireless Service Disruption Detection",
+      "criteria": "streamName = \"mist\"",
+      "client_set_id": 33013,
+      "server_set_id": 33014,
+      "product_id": 33
+    },
+    {
+      "id": 97,
+      "description": "Fortinet Firewall Action Block",
+      "criteria": "streamName = \"fortigate\" AND messageType = \"firewall_action\" AND action = \"blocked\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 98,
+      "description": "Fortinet Alert",
+      "criteria": "streamName = \"fortigate\" AND severityLabel = \"alert\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 99,
+      "description": "Fortinet IDS Action Block",
+      "criteria": "streamName = \"fortigate\" AND messageType = \"ips_action\" AND action = \"blocked\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 100,
+      "description": "Fortinet URL Filter Block",
+      "criteria": "streamName = \"fortigate\" AND messageType = \"waf_event\" AND action = \"blocked\"",
+      "client_set_id": 36024,
+      "server_set_id": 36022,
+      "product_id": 36
+    },
+    {
+      "id": 101,
+      "description": "Fortinet Firewall Action Block",
+      "criteria": "streamName = \"fortinet_fortigate\" AND action = \"blocked\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 102,
+      "description": "Fortinet Firewall Action Block",
+      "criteria": "streamName = \"fortigate\" AND messageType = \"firewall_action\" AND action = \"server-rst\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 103,
+      "description": "Fortinet Firewall Action Block",
+      "criteria": "streamName = \"fortinet_fortigate\" AND action = \"block\"",
+      "client_set_id": 36001,
+      "server_set_id": 36005,
+      "product_id": 36
+    },
+    {
+      "id": 104,
+      "description": "Vectra Cognito Alarm",
+      "criteria": "streamName = \"vectra networks_x series\" AND severityCode < 5",
+      "client_set_id": 37005,
+      "server_set_id": 37001,
+      "product_id": 37
+    },
+    {
+      "id": 105,
+      "description": "Umbrella Alarm",
+      "criteria": "streamName = \"OpenDNS Detection\"",
+      "client_set_id": 38005,
+      "server_set_id": 38001,
+      "product_id": 38
+    },
+    {
+      "id": 106,
+      "description": "OSSEC Auth Failure",
+      "criteria": "streamName = \"ossec\" AND messageType = \"auth_failure\"",
+      "client_set_id": 39001,
+      "server_set_id": 39005,
+      "product_id": 39
+    },
+    {
+      "id": 107,
+      "description": "MalwareBytes Anti-malware Alarm",
+      "criteria": "streamName = \"malwarebytes_mbmc\"",
+      "client_set_id": 40005,
+      "server_set_id": 40001,
+      "product_id": 40
+    },
+    {
+      "id": 108,
+      "description": "Web Application Access Denied (401)",
+      "criteria": "tags CONTAINS \"HTTP_RESPONSE_CODE:401\"",
+      "client_set_id": 6001,
+      "server_set_id": 6005,
+      "product_id": 6
+    },
+    {
+      "id": 109,
+      "description": "Web Application Access Denied (403)",
+      "criteria": "tags CONTAINS \"HTTP_RESPONSE_CODE:403\"",
+      "client_set_id": 6001,
+      "server_set_id": 6005,
+      "product_id": 6
+    },
+    {
+      "id": 110,
+      "description": "Web Application Error (500)",
+      "criteria": "tags CONTAINS \"HTTP_RESPONSE_CODE:500\"",
+      "client_set_id": 6001,
+      "server_set_id": 6005,
+      "product_id": 6
+    },
+    {
+      "id": 111,
+      "description": "Web Application Recon (404)",
+      "criteria": "tags CONTAINS \"HTTP_RESPONSE_CODE:404\"",
+      "client_set_id": 6001,
+      "server_set_id": 6005,
+      "product_id": 6
+    },
+    {
+      "id": 112,
+      "description": "Denial of Service Detected",
+      "criteria": "tags CONTAINS \"service_denial\"",
+      "client_set_id": 6013,
+      "server_set_id": 6014,
+      "product_id": 6
+    },
+    {
+      "id": 113,
+      "description": "Denial of Service Confirmed",
+      "criteria": "tags CONTAINS \"service_denial_confirmed\"",
+      "client_set_id": 6013,
+      "server_set_id": 6020,
+      "product_id": 6
+    },
+    {
+      "id": 114,
+      "description": "Policy Violation Detected",
+      "criteria": "tags CONTAINS \"policy_violation\"",
+      "client_set_id": 6024,
+      "server_set_id": 6022,
+      "product_id": 6
+    },
+    {
+      "id": 115,
+      "description": "Authentication Failure",
+      "criteria": "messageType = \"auth_failure\"",
+      "client_set_id": 6001,
+      "server_set_id": 6005,
+      "product_id": 6
+    },
+    {
+      "id": 116,
+      "description": "Data Upload > 10GB",
+      "criteria": "clientBytes > 10000000000",
+      "client_set_id": 6003,
+      "server_set_id": 6007,
+      "product_id": 6
+    },
+    {
+      "id": 117,
+      "description": "Data Download > 10GB",
+      "criteria": "serverBytes > 10000000000",
+      "client_set_id": 6002,
+      "server_set_id": 6006,
+      "product_id": 6
+    },
+    {
+      "id": 118,
+      "description": "Qualys Vulnerability",
+      "criteria": "streamName = \"Qualys Vulnerability\"",
+      "client_set_id": 0,
+      "server_set_id": 0,
+      "product_id": 42
+    },
+    {
+      "id": 119,
+      "description": "Windows Authentication",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\"",
+      "client_set_id": 0,
+      "server_set_id": 0,
+      "product_id": 43
+    },
+    {
+      "id": 120,
+      "description": "User Account Created",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4720\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 121,
+      "description": "A member was added to a security-enabled global group",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4728\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 122,
+      "description": "A member was added to a security-enabled local group",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4732\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 123,
+      "description": "A member was added to a security-enabled universal group",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4756\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 124,
+      "description": "A security-enabled local group was changed",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4735\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 125,
+      "description": "The audit log was cleared",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:1102\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 126,
+      "description": "A user account was locked out",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4740\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 127,
+      "description": "Object permission was changed",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4640\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 128,
+      "description": "Special privileges assigned to new logon",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4672\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 129,
+      "description": "Windows Defender detected malware",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:1116\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 130,
+      "description": "User Account Created",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4720\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 131,
+      "description": "A member was added to a security-enabled global group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4728\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 132,
+      "description": "A member was added to a security-enabled local group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4732\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 133,
+      "description": "A member was added to a security-enabled universal group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4756\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 134,
+      "description": "A security-enabled local group was changed",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4735\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 135,
+      "description": "The audit log was cleared",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:1102\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 136,
+      "description": "A user account was locked out",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4740\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 137,
+      "description": "Object permission was changed",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4760\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 138,
+      "description": "Special privileges assigned to new logon",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4672\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 139,
+      "description": "Windows Defender detected malware",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:116\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 140,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4625\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 141,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4625\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 142,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4673\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 143,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"microsoft_windows_security_audit\" AND tags CONTAINS \"eventId:4673\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 144,
+      "description": "A member was added to a security-enabled global group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4728\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 145,
+      "description": "A member was added to a security-enabled local group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4732\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 146,
+      "description": "A member was added to a security-enabled universal group",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4756\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 147,
+      "description": "A security-enabled local group was changed",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4735\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 148,
+      "description": "The audit log was cleared",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:1102\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 149,
+      "description": "A user account was locked out",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4740\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 150,
+      "description": "Object permission was changed",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4760\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 151,
+      "description": "Special privileges assigned to new logon",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4672\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 152,
+      "description": "Windows Defender detected malware",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:116\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 153,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4625\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 154,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4673\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 155,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"Microsoft-Windows-Security-Auditing\" AND tags CONTAINS \"eventId:4720\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 156,
+      "description": "User Account Created",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4720\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 157,
+      "description": "A member was added to a security-enabled global group",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4728\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 158,
+      "description": "A member was added to a security-enabled local group",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4732\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 159,
+      "description": "A member was added to a security-enabled universal group",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4756\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 160,
+      "description": "A security-enabled local group was changed",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4735\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 161,
+      "description": "The audit log was cleared",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:1102\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 162,
+      "description": "A user account was locked out",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4740\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 163,
+      "description": "Object permission was changed",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4640\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 164,
+      "description": "Special privileges assigned to new logon",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4672\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 165,
+      "description": "Windows Defender detected malware",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:1116\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 166,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4625\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 167,
+      "description": "Windows Failed Login Attempt",
+      "criteria": "streamName = \"microsoft-windows-security-auditing\" AND tags CONTAINS \"eventId:4673\"",
+      "client_set_id": 43005,
+      "server_set_id": 43001,
+      "product_id": 43
+    },
+    {
+      "id": 168,
+      "description": "Symantec DLP Detection",
+      "criteria": "streamName = \"symantec_dlp\"",
+      "client_set_id": 44003,
+      "server_set_id": 44007,
+      "product_id": 44
+    },
+    {
+      "id": 169,
+      "description": "BRO IDS Detection",
+      "criteria": "streamName = \"bro\" AND severityCode < 5",
+      "client_set_id": 45001,
+      "server_set_id": 45005,
+      "product_id": 45
+    },
+    {
+      "id": 170,
+      "description": "Cisco ISE Authentication Failure",
+      "criteria": "streamName = \"cisco_ise\" AND messageType = \"auth_failure\"",
+      "client_set_id": 100001,
+      "server_set_id": 100005,
+      "product_id": 100
+    },
+    {
+      "id": 171,
+      "description": "Varonis DatAdvantage Detection",
+      "criteria": "streamName = \"varonis inc._datadvantage\" AND severityCode < 5",
+      "client_set_id": 46001,
+      "server_set_id": 46005,
+      "product_id": 46
+    },
+    {
+      "id": 172,
+      "description": "Centrify Detection",
+      "criteria": "streamName = \"centrify\" AND severityCode < 5",
+      "client_set_id": 47001,
+      "server_set_id": 47005,
+      "product_id": 47
+    },
+    {
+      "id": 173,
+      "description": "Centrify Detection",
+      "criteria": "streamName = \"centrify\" AND severityLabel = \"High\"",
+      "client_set_id": 47001,
+      "server_set_id": 47005,
+      "product_id": 47
+    },
+    {
+      "id": 174,
+      "description": "Centrify Detection",
+      "criteria": "streamName = \"centrify\" AND action = \"block\"",
+      "client_set_id": 47001,
+      "server_set_id": 47005,
+      "product_id": 47
+    },
+    {
+      "id": 175,
+      "description": "Centrify Detection",
+      "criteria": "streamName = \"centrify\" AND messageType = \"auth_failure\"",
+      "client_set_id": 47001,
+      "server_set_id": 47005,
+      "product_id": 47
+    },
+    {
+      "id": 176,
+      "description": "Netscaler Detection",
+      "criteria": "streamName = \"netscaler\" AND severityCode < 5",
+      "client_set_id": 70001,
+      "server_set_id": 70005,
+      "product_id": 70
+    },
+    {
+      "id": 177,
+      "description": "Netscaler Detection",
+      "criteria": "streamName = \"netscaler\" AND severityLabel = \"High\"",
+      "client_set_id": 70001,
+      "server_set_id": 70005,
+      "product_id": 70
+    },
+    {
+      "id": 178,
+      "description": "Netscaler Detection",
+      "criteria": "streamName = \"netscaler\" AND action = \"block\"",
+      "client_set_id": 70001,
+      "server_set_id": 70005,
+      "product_id": 70
+    },
+    {
+      "id": 179,
+      "description": "Netscaler Detection",
+      "criteria": "streamName = \"netscaler\" AND messageType = \"auth_failure\"",
+      "client_set_id": 70001,
+      "server_set_id": 70005,
+      "product_id": 70
+    },
+    {
+      "id": 180,
+      "description": "F5 ASM Detection",
+      "criteria": "streamName = \"f5_asm\" AND severityCode < 5",
+      "client_set_id": 48001,
+      "server_set_id": 48005,
+      "product_id": 48
+    },
+    {
+      "id": 181,
+      "description": "F5 Detection",
+      "criteria": "streamName = \"f5\" AND severityCode < 5",
+      "client_set_id": 48001,
+      "server_set_id": 48005,
+      "product_id": 48
+    },
+    {
+      "id": 182,
+      "description": "Imperva SecureSphere Detection",
+      "criteria": "streamName = \"imperva_secure_sphere\" AND severityLabel = \"High\"",
+      "client_set_id": 49001,
+      "server_set_id": 49005,
+      "product_id": 49
+    },
+    {
+      "id": 183,
+      "description": "Imperva SecureSphere Detection",
+      "criteria": "streamName = \"imperva_secure_sphere\" AND severityCode < 5",
+      "client_set_id": 49001,
+      "server_set_id": 49005,
+      "product_id": 49
+    },
+    {
+      "id": 184,
+      "description": "Secret Server Detection",
+      "criteria": "streamName = \"thycotic software_secret server\" AND severityCode < 5",
+      "client_set_id": 50001,
+      "server_set_id": 50005,
+      "product_id": 50
+    },
+    {
+      "id": 185,
+      "description": "McAfee Web Gateway Detection",
+      "criteria": "streamName = \"mcafee_web_gateway\" AND severityCode < 5",
+      "client_set_id": 51024,
+      "server_set_id": 51022,
+      "product_id": 51
+    },
+    {
+      "id": 186,
+      "description": "Cylance Protect Detection",
+      "criteria": "streamName = \"Cylance MALWARE Detection\"",
+      "client_set_id": 52001,
+      "server_set_id": 52005,
+      "product_id": 52
+    },
+    {
+      "id": 187,
+      "description": "Cylance Protect Detection",
+      "criteria": "streamName = \"Cylance Detection\"",
+      "client_set_id": 52001,
+      "server_set_id": 52005,
+      "product_id": 52
+    },
+    {
+      "id": 188,
+      "description": "Wazuh Detection",
+      "criteria": "streamName = \"wazuh inc._wazuh\" AND severityCode < 5",
+      "client_set_id": 54001,
+      "server_set_id": 54005,
+      "product_id": 54
+    },
+    {
+      "id": 189,
+      "description": "Nokia NetGuard Detection",
+      "criteria": "streamName = \"nokia_netguard\" AND severityLabel = \"high\"",
+      "client_set_id": 55001,
+      "server_set_id": 55005,
+      "product_id": 55
+    },
+    {
+      "id": 190,
+      "description": "Sophos Detection",
+      "criteria": "streamName = \"Sophos Detection\" AND severityCode < 5",
+      "client_set_id": 56001,
+      "server_set_id": 56005,
+      "product_id": 56
+    },
+    {
+      "id": 191,
+      "description": "MS ATA Detection",
+      "criteria": "streamName = \"microsoft_ata\"",
+      "client_set_id": 57001,
+      "server_set_id": 57005,
+      "product_id": 57
+    },
+    {
+      "id": 192,
+      "description": "McAfee ePO Detection",
+      "criteria": "streamName = \"mcafee_epo\" AND severityCode < 3 AND messageType != \"software_update_event\"",
+      "client_set_id": 58001,
+      "server_set_id": 58005,
+      "product_id": 58
+    },
+    {
+      "id": 193,
+      "description": "pfSense Firewall Block",
+      "criteria": "streamName = \"pf_sense_firewall\" AND action = \"block\"",
+      "client_set_id": 81001,
+      "server_set_id": 81005,
+      "product_id": 81
+    },
+    {
+      "id": 194,
+      "description": "SonicWall Firewall Block",
+      "criteria": "streamName = \"sonic_wall_firewall\" AND action = \"block\"",
+      "client_set_id": 82001,
+      "server_set_id": 82005,
+      "product_id": 82
+    },
+    {
+      "id": 195,
+      "description": "SonicWall Firewall Closed with 0 Bytes",
+      "criteria": "streamName = \"sonicwall_nsa 3600\" AND messageType = \"Connection Closed\" AND serverBytes < 1",
+      "client_set_id": 82001,
+      "server_set_id": 82005,
+      "product_id": 82
+    },
+    {
+      "id": 196,
+      "description": "SonicWall Firewall Closed with 0 Bytes",
+      "criteria": "streamName = \"sonic_wall_firewall\" AND messageType = \"Connection Closed\" AND serverBytes < 1",
+      "client_set_id": 82001,
+      "server_set_id": 82005,
+      "product_id": 82
+    },
+    {
+      "id": 197,
+      "description": "SonicWall High Severity",
+      "criteria": "streamName = \"dell_nsa 250 m\" AND severityCode < 5",
+      "client_set_id": 82001,
+      "server_set_id": 82005,
+      "product_id": 82
+    },
+    {
+      "id": 198,
+      "description": "SpamTitan Block",
+      "criteria": "streamName = \"spam_titan\" AND action = \"block\" ",
+      "client_set_id": 84023,
+      "server_set_id": 84015,
+      "product_id": 84
+    },
+    {
+      "id": 199,
+      "description": "Fail2Ban Ban",
+      "criteria": "streamName = \"fail2ban\" AND action = \"block\" ",
+      "client_set_id": 91001,
+      "server_set_id": 91005,
+      "product_id": 91
+    },
+    {
+      "id": 200,
+      "description": "AWS VPC Reject",
+      "criteria": "streamName = \"aws_vpc_flow_log\" AND action = \"REJECT\"",
+      "client_set_id": 92001,
+      "server_set_id": 92005,
+      "product_id": 92
+    },
+    {
+      "id": 201,
+      "description": "AWS VPC Reject",
+      "criteria": "streamName = \"aws_vpc_flow_log\" AND action = \"block\"",
+      "client_set_id": 92001,
+      "server_set_id": 92005,
+      "product_id": 92
+    },
+    {
+      "id": 202,
+      "description": "Azure Security Alert",
+      "criteria": "streamName = \"azure_security_alert\" AND severityCode < 5",
+      "client_set_id": 94001,
+      "server_set_id": 94005,
+      "product_id": 94
+    },
+    {
+      "id": 203,
+      "description": "Microsoft ATA Alert",
+      "criteria": "streamName = \"microsoft_ata\"",
+      "client_set_id": 94001,
+      "server_set_id": 94005,
+      "product_id": 94
+    },
+    {
+      "id": 204,
+      "description": "Unify Security Gateway Alert",
+      "criteria": "streamName = \"unifi_security_gateway\" AND severityCode < 5",
+      "client_set_id": 95001,
+      "server_set_id": 95005,
+      "product_id": 95
+    },
+    {
+      "id": 205,
+      "description": "Deep Instinct Alarm",
+      "criteria": "streamName = \"deep instinct_d-appliance\" AND severityCode < 5",
+      "client_set_id": 96001,
+      "server_set_id": 96005,
+      "product_id": 96
+    },
+    {
+      "id": 206,
+      "description": "UFW Firewall Block",
+      "criteria": "streamName = \"ufw\" AND action = \"block\"",
+      "client_set_id": 99001,
+      "server_set_id": 99005,
+      "product_id": 99
+    },
+    {
+      "id": 207,
+      "description": "Shibboleth Authentication Failure",
+      "criteria": "streamName = \"shibboleth\" AND messageType = \"auth_failure\"",
+      "client_set_id": 102001,
+      "server_set_id": 102005,
+      "product_id": 102
+    },
+    {
+      "id": 208,
+      "description": "AT&T Arris Gateway Firewall Block",
+      "criteria": "streamName = \"att_arris_gateway\" AND action = \"block\"",
+      "client_set_id": 103001,
+      "server_set_id": 103005,
+      "product_id": 103
+    },
+    {
+      "id": 209,
+      "description": "Cisco OS Suspicious Network Activity",
+      "criteria": "streamName = \"cisco_os\" AND messageType = \"suspicious_network\"",
+      "client_set_id": 104001,
+      "server_set_id": 104005,
+      "product_id": 105
+    },
+    {
+      "id": 210,
+      "description": "Cisco OS Detection",
+      "criteria": "streamName = \"cisco_os\" AND severityCode < 5",
+      "client_set_id": 105001,
+      "server_set_id": 105005,
+      "product_id": 105
+    },
+    {
+      "id": 211,
+      "description": "Cisco OS Detection",
+      "criteria": "streamName = \"cisco_os\" AND severityLabel = \"High\"",
+      "client_set_id": 105001,
+      "server_set_id": 105005,
+      "product_id": 105
+    },
+    {
+      "id": 212,
+      "description": "Cisco OS Detection",
+      "criteria": "streamName = \"cisco_os\" AND action = \"block\"",
+      "client_set_id": 105001,
+      "server_set_id": 105005,
+      "product_id": 105
+    },
+    {
+      "id": 213,
+      "description": "Cisco Wireless Detection",
+      "criteria": "streamName = \"cisco_os\" AND messageType = \"auth_failure\"",
+      "client_set_id": 105001,
+      "server_set_id": 105005,
+      "product_id": 105
+    },
+    {
+      "id": 214,
+      "description": "McAfee NSP Detection",
+      "criteria": "streamName = \"mcafee_nsp\" AND severityCode < 5",
+      "client_set_id": 106001,
+      "server_set_id": 106005,
+      "product_id": 106
+    },
+    {
+      "id": 215,
+      "description": "McAfee NSP Detection",
+      "criteria": "streamName = \"mcafee_nsp\" AND severityLabel = \"High\"",
+      "client_set_id": 106001,
+      "server_set_id": 106005,
+      "product_id": 106
+    },
+    {
+      "id": 216,
+      "description": "McAfee NSP Detection",
+      "criteria": "streamName = \"mcafee_nsp\" AND action = \"block\"",
+      "client_set_id": 106001,
+      "server_set_id": 106005,
+      "product_id": 106
+    },
+    {
+      "id": 217,
+      "description": "McAfee NSP Detection",
+      "criteria": "streamName = \"mcafee_nsp\" AND messageType = \"auth_failure\"",
+      "client_set_id": 106001,
+      "server_set_id": 106005,
+      "product_id": 106
+    },
+    {
+      "id": 218,
+      "description": "Pulse Secure Detection",
+      "criteria": "streamName = \"pulse_secure\" AND severityCode < 5",
+      "client_set_id": 107001,
+      "server_set_id": 107005,
+      "product_id": 107
+    },
+    {
+      "id": 219,
+      "description": "Pulse Secure Detection",
+      "criteria": "streamName = \"pulse_secure\" AND severityLabel = \"High\"",
+      "client_set_id": 107001,
+      "server_set_id": 107005,
+      "product_id": 107
+    },
+    {
+      "id": 220,
+      "description": "Pulse Secure Detection",
+      "criteria": "streamName = \"pulse_secure\" AND action = \"block\"",
+      "client_set_id": 107001,
+      "server_set_id": 107005,
+      "product_id": 107
+    },
+    {
+      "id": 221,
+      "description": "Pulse Secure Detection",
+      "criteria": "streamName = \"pulse_secure\" AND messageType = \"auth_failure\"",
+      "client_set_id": 107001,
+      "server_set_id": 107005,
+      "product_id": 107
+    },
+    {
+      "id": 222,
+      "description": "Beyond Trust Detection",
+      "criteria": "streamName = \"beyond_trust\" AND severityCode < 5",
+      "client_set_id": 108001,
+      "server_set_id": 108005,
+      "product_id": 108
+    },
+    {
+      "id": 223,
+      "description": "Beyond Trust Detection",
+      "criteria": "streamName = \"beyond_trust\" AND severityLabel = \"High\"",
+      "client_set_id": 108001,
+      "server_set_id": 108005,
+      "product_id": 108
+    },
+    {
+      "id": 224,
+      "description": "Beyond Trust Detection",
+      "criteria": "streamName = \"beyond_trust\" AND action = \"block\"",
+      "client_set_id": 108001,
+      "server_set_id": 108005,
+      "product_id": 108
+    },
+    {
+      "id": 225,
+      "description": "Beyond Trust Detection",
+      "criteria": "streamName = \"beyond_trust\" AND messageType = \"auth_failure\"",
+      "client_set_id": 108001,
+      "server_set_id": 108005,
+      "product_id": 108
+    },
+    {
+      "id": 226,
+      "description": "Cisco WSA Detection",
+      "criteria": "streamName = \"cisco_wsa\" AND severityCode < 5",
+      "client_set_id": 109001,
+      "server_set_id": 109005,
+      "product_id": 109
+    },
+    {
+      "id": 227,
+      "description": "Cisco WSA Detection",
+      "criteria": "streamName = \"cisco_wsa\" AND severityLabel = \"High\"",
+      "client_set_id": 109001,
+      "server_set_id": 109005,
+      "product_id": 109
+    },
+    {
+      "id": 228,
+      "description": "Cisco WSA Detection",
+      "criteria": "streamName = \"cisco_wsa\" AND action = \"block\"",
+      "client_set_id": 109001,
+      "server_set_id": 109005,
+      "product_id": 109
+    },
+    {
+      "id": 229,
+      "description": "Cisco WSA Detection",
+      "criteria": "streamName = \"cisco_wsa\" AND messageType = \"auth_failure\"",
+      "client_set_id": 109001,
+      "server_set_id": 109005,
+      "product_id": 109
+    },
+    {
+      "id": 230,
+      "description": "Kernel Martian Source Detection",
+      "criteria": "streamName = \"kernel\" AND tags CONTAINS \"EVENT:martian_source\"",
+      "client_set_id": 110001,
+      "server_set_id": 110005,
+      "product_id": 110
+    },
+    {
+      "id": 231,
+      "description": "Cisco ACS Auth Failure",
+      "criteria": "streamName = \"cisco_acs\" AND messageType = \"auth_failure\"",
+      "client_set_id": 111001,
+      "server_set_id": 111005,
+      "product_id": 111
+    },
+    {
+      "id": 232,
+      "description": "Blocked Action",
+      "criteria": "action = \"block\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 233,
+      "description": "Authentication Failure",
+      "criteria": "messageType = \"auth_failure\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 234,
+      "description": "Exploit Attempt",
+      "criteria": "messageType = \"exploit_attempt\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 235,
+      "description": "Privilege Escalation",
+      "criteria": "messageType = \"privilege_escalation\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 236,
+      "description": "Credential Access",
+      "criteria": "messageType = \"credential_access\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 237,
+      "description": "Malicious Session",
+      "criteria": "messageType = \"malicious_session\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 238,
+      "description": "Defense Evasion",
+      "criteria": "messageType = \"defense_evasion\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 239,
+      "description": "Service Discovery",
+      "criteria": "messageType = \"service_discovery\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 240,
+      "description": "Malicious Behavior",
+      "criteria": "messageType = \"malicious_behavior\"",
+      "client_set_id": 5,
+      "server_set_id": 1,
+      "product_id": 0
+    },
+    {
+      "id": 241,
+      "description": "Command and Control",
+      "criteria": "messageType = \"botnet_connection\"",
+      "client_set_id": 9,
+      "server_set_id": 8,
+      "product_id": 0
+    },
+    {
+      "id": 242,
+      "description": "Data Staging",
+      "criteria": "messageType = \"data_staging\"",
+      "client_set_id": 2,
+      "server_set_id": 6,
+      "product_id": 0
+    },
+    {
+      "id": 243,
+      "description": "Data Exfiltration",
+      "criteria": "messageType = \"data_exfiltration\"",
+      "client_set_id": 3,
+      "server_set_id": 7,
+      "product_id": 0
+    },
+    {
+      "id": 244,
+      "description": "Phishing Email",
+      "criteria": "messageType = \"phishing_email\"",
+      "client_set_id": 5,
+      "server_set_id": 23,
+      "product_id": 0
+    },
+    {
+      "id": 245,
+      "description": "Phishing Click",
+      "criteria": "messageType = \"phishing_click\"",
+      "client_set_id": 5,
+      "server_set_id": 23,
+      "product_id": 0
+    },
+    {
+      "id": 246,
+      "description": "Policy Violation",
+      "criteria": "messageType = \"prohibited_connection\"",
+      "client_set_id": 24,
+      "server_set_id": 22,
+      "product_id": 0
+    },
+    {
+      "id": 247,
+      "description": "Ransomware Download",
+      "criteria": "messageType = \"ransomware_download\"",
+      "client_set_id": 19,
+      "server_set_id": 26,
+      "product_id": 0
+    },
+    {
+      "id": 248,
+      "description": "Ransomware Encryption",
+      "criteria": "messageType = \"ransomware_encryption\"",
+      "client_set_id": 19,
+      "server_set_id": 26,
+      "product_id": 0
+    },
+    {
+      "id": 249,
+      "description": "Service Disruption",
+      "criteria": "messageType = \"service_disruption\"",
+      "client_set_id": 13,
+      "server_set_id": 14,
+      "product_id": 0
+    },
+    {
+      "id": 250,
+      "description": "IDS Event",
+      "criteria": "messageType = \"ids_event\" AND severityCode < 5",
+      "client_set_id": 5,
+      "server_set_id": 1,
+      "product_id": 0
+    },
+    {
+      "id": 251,
+      "description": "Content Filter",
+      "criteria": "messageType = \"content_filter\"",
+      "client_set_id": 24,
+      "server_set_id": 22,
+      "product_id": 0
+    },
+    {
+      "id": 252,
+      "description": "Anomalous Behavior",
+      "criteria": "messageType = \"anomalous_behavior\"",
+      "client_set_id": 5,
+      "server_set_id": 1,
+      "product_id": 0
+    },
+    {
+      "id": 253,
+      "description": "Degraded Hardware Detected",
+      "criteria": "messageType = \"degraded_hardware\"",
+      "client_set_id": 33,
+      "server_set_id": 58,
+      "product_id": 0
+    },
+    {
+      "id": 254,
+      "description": "Degraded Service Detected",
+      "criteria": "messageType = \"degraded_service\"",
+      "client_set_id": 35,
+      "server_set_id": 58,
+      "product_id": 0
+    },
+    {
+      "id": 255,
+      "description": "Financial Anomaly",
+      "criteria": "messageType = \"financial_anomaly\"",
+      "client_set_id": 60,
+      "server_set_id": 61,
+      "product_id": 0
+    },
+    {
+      "id": 256,
+      "description": "Financial Exploit",
+      "criteria": "messageType = \"financial_exploit\"",
+      "client_set_id": 60,
+      "server_set_id": 61,
+      "product_id": 0
+    },
+    {
+      "id": 257,
+      "description": "Infrastructure Exploit",
+      "criteria": "messageType = \"infrastructure_exploit\"",
+      "client_set_id": 70,
+      "server_set_id": 71,
+      "product_id": 0
+    },
+    {
+      "id": 258,
+      "description": "Blacklisted Process",
+      "criteria": "tags CONTAINS \"Blacklist process found\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 259,
+      "description": "Infocyte Detection",
+      "criteria": "streamName = \"infocyte_hunt\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 260,
+      "description": "Malicious Software Detected",
+      "criteria": "messageType = \"malicious_software\"",
+      "client_set_id": 1,
+      "server_set_id": 5,
+      "product_id": 0
+    },
+    {
+      "id": 261,
+      "description": "Data Destruction",
+      "criteria": "messageType = \"data_destruction\"",
+      "client_set_id": 13,
+      "server_set_id": 14,
+      "product_id": 0
+    }
+  ],
+  "sets": {
+    "1": "Exploiting Host",
+    "2": "Staging Host",
+    "3": "Exfiltration Host",
+    "4": "Suspicious User",
+    "5": "Exploiting Target",
+    "6": "Staging Target",
+    "7": "Exfiltration Target",
+    "8": "C2 Server",
+    "9": "Bot",
+    "10": "Malicious File",
+    "11": "Reconnaissance Host",
+    "12": "Reconnaissance Target",
+    "13": "Disruption Host",
+    "14": "Disruption Target",
+    "20": "Disrupted Service",
+    "15": "Phishing Site",
+    "16": "Phished User",
+    "23": "Phished Host",
+    "17": "Phishing Email",
+    "18": "Ransomware Malware",
+    "19": "Ransomware Target",
+    "26": "Ransomware Source",
+    "25": "Ransomware User",
+    "21": "Policy Violation User",
+    "22": "Policy Violation Target",
+    "24": "Policy Violation Host",
+    "30": "Malicious Email",
+    "32": "Degraded Hardware",
+    "33": "Degraded Hardware Host",
+    "34": "Degraded Service",
+    "35": "Degraded Service Host",
+    "36": "Degraded Service User",
+    "37": "Degraded Service File",
+    "38": "Degraded Hardware User",
+    "39": "Degraded Hardware File",
+    "40": "Exploited Service",
+    "41": "Exploited Hardware",
+    "42": "Staging Service",
+    "43": "Staging Hardware",
+    "44": "Exfiltration Service",
+    "45": "Exfiltration Hardware",
+    "46": "Botnet Service",
+    "47": "Botnet Hardware",
+    "48": "Recon Service",
+    "49": "Recon Hardware",
+    "50": "Disruption Service",
+    "51": "Disruption Hardware",
+    "52": "Phishing Service",
+    "53": "Phishing Hardware",
+    "54": "Ransomware Service",
+    "55": "Ransomware Hardware",
+    "56": "Policy Violation Service",
+    "57": "Policy Violation Hardware",
+    "58": "Degraded Service Server",
+    "60": "Financial Exploit Target",
+    "61": "Financial Exploiting Host",
+    "62": "Financial Exploiting File",
+    "63": "Financial Exploiting User",
+    "64": "Financial Exploiting Hardware",
+    "65": "Financial Exploiting Service",
+    "66": "Financial Account",
+    "70": "SCADA Exploit Target",
+    "71": "SCADA Exploiting Host",
+    "72": "SCADA Exploiting File",
+    "73": "SCADA Exploiting User",
+    "74": "SCADA Exploiting Hardware",
+    "75": "SCADA Exploiting Service",
+    "200": "General",
+    "201": "Exploiting Host",
+    "202": "Staging Host",
+    "203": "Exploiting Host",
+    "204": "Suspicious User",
+    "205": "Exploiting Target",
+    "206": "Staging Target",
+    "207": "Exfiltration Target",
+    "208": "C2 Server",
+    "209": "Bot",
+    "210": "Malicious File",
+    "301": "Internal Host",
+    "302": "External Host",
+    "303": "Server",
+    "304": "Web Server",
+    "305": "Email Server",
+    "306": "Backup Server",
+    "307": "Wireless Host",
+    "308": "Network Scanner",
+    "309": "Business Critical Host",
+    "310": "Host with Business Critical User",
+    "311": "Infrastructure Device",
+    "312": "Mobile Host",
+    "313": "Laptop Host",
+    "314": "SCADA Device",
+    "315": "IoT Device",
+    "316": "Virtual Machine",
+    "317": "Cloud Host",
+    "318": "Contractor Host",
+    "319": "Host with Sensitive Data",
+    "320": "Host with Sensitive PII Data",
+    "321": "Host with Sensitive Card Data",
+    "322": "Host with Sensitive Proprietary Data",
+    "323": "Host is Joined to Domain",
+    "324": "Business Critical User ",
+    "325": "SysAdmin User ",
+    "326": "Employee User ",
+    "327": "Contractor User ",
+    "328": "System Account User "
+  }
+}

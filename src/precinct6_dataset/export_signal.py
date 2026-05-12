@@ -95,7 +95,9 @@ class SignalExporter:
             "mo_name": labels.get("mo_name", ""),
             "suspicion_score": labels.get("suspicion_score", 0),
             "lifecycle_stage": labels.get("lifecycle_stage", ""),
-            "disposition": labels.get("disposition", "automated"),
+            "disposition": labels.get("disposition", "Unprocessed"),
+            "disposition_category": labels.get("disposition_category", "automated"),
+            "is_false_positive": labels.get("is_false_positive", False),
             "status_name": labels.get("status_name", ""),
             "incident_ids": json.dumps(labels.get("incident_ids", [])),
             # Lead rule tagging

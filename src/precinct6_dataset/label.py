@@ -370,7 +370,7 @@ class Labeler:
             # STATUS_TO_DISPOSITION mapping if you need bucketed categories
             # (confirmed-malicious / false-positive / dismissed / automated).
             "disposition": status_name or "Unprocessed",
-            "disposition_category": labels.get("disposition", "automated"),
+            "disposition_category": labels.get("disposition_category", "automated"),
             "status_name": status_name,
             "is_false_positive": bool(is_fp),
         }
@@ -390,6 +390,10 @@ class Labeler:
         defense_techniques = set()
         set_role_names = []
 
+        # Extract set role names from multiple sources:
+        # 1. incident.sets — list of integer set IDs OR dict of set objects
+        # 2. incident.nodes.{uuid}.sets — dict of full set objects (most reliable)
+        # 3. Resolve integer IDs via self.set_catalog (loaded from lead_rules_catalog.json)
         sets = incident.get("sets", {})
         if isinstance(sets, dict):
             for set_obj in sets.values():
@@ -397,24 +401,32 @@ class Labeler:
                     set_name = set_obj.get("name", "")
                     if set_name:
                         set_role_names.append(set_name)
-                        # Derive tactics from set role
-                        for t in SET_ROLE_TO_TACTICS.get(set_name, []):
-                            attack_tactics.add(t)
         elif isinstance(sets, list):
             for s in sets:
                 if isinstance(s, dict):
                     set_name = s.get("name", "")
                     if set_name:
                         set_role_names.append(set_name)
-                        for t in SET_ROLE_TO_TACTICS.get(set_name, []):
-                            attack_tactics.add(t)
+                elif isinstance(s, int):
+                    # Integer set ID — look up name in catalog
+                    name = self.set_catalog.get(s, "")
+                    if name:
+                        set_role_names.append(name)
 
-        # Pull frameworks from nodes
+        # Pull set names + frameworks from nodes (richer data than incident.sets)
         nodes = incident.get("nodes", {})
         if isinstance(nodes, dict):
             for node in nodes.values():
                 if not isinstance(node, dict):
                     continue
+                # Set roles from node.sets (dict of {set_id_str: {id, name, ...}})
+                node_sets = node.get("sets", {})
+                if isinstance(node_sets, dict):
+                    for s in node_sets.values():
+                        if isinstance(s, dict):
+                            n = s.get("name", "")
+                            if n and n not in set_role_names:
+                                set_role_names.append(n)
                 products = node.get("products", {})
                 if isinstance(products, dict):
                     for pid_str, prod in products.items():
@@ -440,6 +452,10 @@ class Labeler:
                                         attack_techniques.add(t)
                         except (ValueError, TypeError):
                             pass
+
+        # Derive tactics from all set role names (collected above)
+        for t in tactics_for_set_roles(set_role_names):
+            attack_tactics.add(t)
 
         # Modus operandi — add MO-derived tactics and techniques
         mo_name = incident.get("mo_name", "")
@@ -479,7 +495,8 @@ class Labeler:
             "suspicion_score": suspicion,
             "status_name": status,
             "status_id": status_id,
-            "disposition": disposition,
+            "disposition": status or "Unprocessed",  # raw status_name
+            "disposition_category": disposition,  # bucketed: confirmed-malicious/false-positive/...
             "lifecycle_stage": lifecycle,
             "incident_id": incident.get("id", ""),
             "is_false_positive": is_false_positive,

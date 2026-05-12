@@ -56,6 +56,52 @@ class GraphExporter:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.nodes = {}  # node_id -> node dict
         self.edges = []  # list of edge dicts
+        self._set_id_to_name = self._load_set_catalog()
+
+    def _load_set_catalog(self) -> dict:
+        """Load set_id -> name mapping from data/lead_rules_catalog.json."""
+        import json as _json
+        from pathlib import Path as _Path
+        catalog_path = _Path("data/lead_rules_catalog.json")
+        if not catalog_path.exists():
+            return {}
+        try:
+            with open(catalog_path) as f:
+                cat = _json.load(f)
+            return {int(k): v for k, v in cat.get("sets", {}).items()}
+        except Exception:
+            return {}
+
+    def _extract_set_role_names(self, incident: dict) -> list:
+        """Extract set role names from incident.sets (int list / dict) and nodes."""
+        names = []
+        sets = incident.get("sets", {})
+        if isinstance(sets, dict):
+            for s in sets.values():
+                if isinstance(s, dict) and s.get("name"):
+                    names.append(s["name"])
+        elif isinstance(sets, list):
+            for s in sets:
+                if isinstance(s, dict) and s.get("name"):
+                    names.append(s["name"])
+                elif isinstance(s, int):
+                    n = self._set_id_to_name.get(s, "")
+                    if n:
+                        names.append(n)
+        # Also pull from nodes.{uuid}.sets (richer data)
+        nodes = incident.get("nodes", {})
+        if isinstance(nodes, dict):
+            for node in nodes.values():
+                if not isinstance(node, dict):
+                    continue
+                node_sets = node.get("sets", {})
+                if isinstance(node_sets, dict):
+                    for s in node_sets.values():
+                        if isinstance(s, dict):
+                            n = s.get("name", "")
+                            if n and n not in names:
+                                names.append(n)
+        return names
 
     def export_all(self, per_incident_graphml: bool = True, streaming_graphml: bool = True):
         """Export all data in graph formats.
@@ -134,19 +180,12 @@ class GraphExporter:
 
                 mo_name = incident.get("mo_name", "")
                 status = incident.get("status_name", "Unprocessed")
-                disposition = STATUS_TO_DISPOSITION.get(status, "automated")
+                # disposition = raw Precinct status_name (consistent with signal export)
+                disposition = status or "Unprocessed"
+                disposition_category = STATUS_TO_DISPOSITION.get(status, "automated")
                 suspicion = incident.get("suspicion_score", 0) or 0
 
-                set_role_names = []
-                isets = incident.get("sets", {})
-                if isinstance(isets, dict):
-                    for s in isets.values():
-                        if isinstance(s, dict) and s.get("name"):
-                            set_role_names.append(s["name"])
-                elif isinstance(isets, list):
-                    for s in isets:
-                        if isinstance(s, dict) and s.get("name"):
-                            set_role_names.append(s["name"])
+                set_role_names = self._extract_set_role_names(incident)
 
                 attack_tactics = merge_unique(
                     tactics_for_set_roles(set_role_names),
@@ -218,6 +257,8 @@ class GraphExporter:
                                     "set_roles": set_role_names,
                                     "lifecycle_stage": lifecycle,
                                     "disposition": disposition,
+                                    "disposition_category": disposition_category,
+                                    "status_name": status,
                                     "incident_id": inc_id,
                                 },
                             )
@@ -386,19 +427,13 @@ class GraphExporter:
                 # Compute incident-level labels (shared by all its edges)
                 mo_name = incident.get("mo_name", "")
                 status = incident.get("status_name", "Unprocessed")
-                disposition = STATUS_TO_DISPOSITION.get(status, "automated")
+                # disposition = raw Precinct status_name
+                disposition = status or "Unprocessed"
+                disposition_category = STATUS_TO_DISPOSITION.get(status, "automated")
                 suspicion = incident.get("suspicion_score", 0) or 0
 
-                set_role_names = []
-                incident_sets = incident.get("sets", {})
-                if isinstance(incident_sets, dict):
-                    for s in incident_sets.values():
-                        if isinstance(s, dict) and s.get("name"):
-                            set_role_names.append(s["name"])
-                elif isinstance(incident_sets, list):
-                    for s in incident_sets:
-                        if isinstance(s, dict) and s.get("name"):
-                            set_role_names.append(s["name"])
+                # Resolve set role names from multiple sources
+                set_role_names = self._extract_set_role_names(incident)
 
                 # MITRE tactics: union of set-role-derived + MO-derived
                 attack_tactics = merge_unique(
@@ -507,6 +542,7 @@ class GraphExporter:
                                     "set_roles": set_role_names,
                                     "lifecycle_stage": lifecycle,
                                     "disposition": disposition,
+                                    "disposition_category": disposition_category,
                                     "status_name": status,
                                     "incident_id": inc_id,
                                 },

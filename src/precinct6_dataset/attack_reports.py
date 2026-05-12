@@ -50,6 +50,26 @@ def _format_timestamp(ts) -> str:
         return "unknown time"
 
 
+def _load_set_catalog():
+    """Load set_id -> name mapping from data/lead_rules_catalog.json (cached)."""
+    global _SET_CATALOG
+    try:
+        return _SET_CATALOG
+    except NameError:
+        pass
+    catalog_path = Path("data/lead_rules_catalog.json")
+    if not catalog_path.exists():
+        _SET_CATALOG = {}
+        return _SET_CATALOG
+    try:
+        with open(catalog_path) as f:
+            cat = json.load(f)
+        _SET_CATALOG = {int(k): v for k, v in cat.get("sets", {}).items()}
+    except Exception:
+        _SET_CATALOG = {}
+    return _SET_CATALOG
+
+
 def _extract_incident_summary(incident: dict) -> dict:
     """Extract structured summary fields from an incident."""
     inc_id = incident.get("id", "unknown")
@@ -57,12 +77,15 @@ def _extract_incident_summary(incident: dict) -> dict:
     mo_name = incident.get("mo_name", "Unknown")
     suspicion = incident.get("suspicion_score", 0)
     status = incident.get("status_name", "Unprocessed")
-    disposition = STATUS_TO_DISPOSITION.get(status, "automated")
+    # disposition = raw status_name (consistent with signal export)
+    disposition = status or "Unprocessed"
+    disposition_category = STATUS_TO_DISPOSITION.get(status, "automated")
 
     first_obs = incident.get("first_observed_at", 0)
     last_obs = incident.get("last_observed_at", 0)
 
-    # Collect set role names
+    # Collect set role names from incident.sets (int IDs or dicts) AND from node.sets
+    set_catalog = _load_set_catalog()
     set_role_names = []
     sets = incident.get("sets", {})
     if isinstance(sets, dict):
@@ -73,6 +96,19 @@ def _extract_incident_summary(incident: dict) -> dict:
         for s in sets:
             if isinstance(s, dict) and s.get("name"):
                 set_role_names.append(s["name"])
+            elif isinstance(s, int):
+                n = set_catalog.get(s, "")
+                if n:
+                    set_role_names.append(n)
+    # Pull from node.sets (richer data)
+    for node in (incident.get("nodes") or {}).values():
+        if not isinstance(node, dict):
+            continue
+        for s in (node.get("sets") or {}).values():
+            if isinstance(s, dict):
+                n = s.get("name", "")
+                if n and n not in set_role_names:
+                    set_role_names.append(n)
 
     # MITRE tactics: union of set role tactics + MO tactics
     tactics = merge_unique(
@@ -141,6 +177,7 @@ def _extract_incident_summary(incident: dict) -> dict:
         "suspicion_score": suspicion,
         "status_name": status,
         "disposition": disposition,
+        "disposition_category": disposition_category,
         "first_observed_at": first_obs,
         "last_observed_at": last_obs,
         "set_role_names": set_role_names,
@@ -167,7 +204,7 @@ def _build_report_text(s: dict) -> str:
         f"Incident {inc_label} was classified by WitFoo Precinct as **{s['mo_name']}** "
         f"with a suspicion score of {s['suspicion_score']:.2f} "
         f"and a final disposition of **{s['status_name']}** "
-        f"(`disposition={s['disposition']}`)."
+        f"(`disposition_category={s['disposition_category']}`)."
     )
 
     # Attack chain start
@@ -294,6 +331,7 @@ def generate_attack_reports(sanitized_dir: Path = None, output_path: Path = None
                 "suspicion_score": summary["suspicion_score"],
                 "status_name": summary["status_name"],
                 "disposition": summary["disposition"],
+                "disposition_category": summary["disposition_category"],
                 "attack_techniques": summary["attack_techniques"],
                 "attack_tactics": summary["attack_tactics"],
                 "lead_count": summary["lead_count"],

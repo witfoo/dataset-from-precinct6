@@ -20,15 +20,18 @@
 | `severity` | string | Severity level |
 | `vendor_code` | string | Vendor event code |
 | `message_sanitized` | string | Full sanitized log message |
-| `label_binary` | string | malicious/suspicious/benign |
-| `label_confidence` | float32 | Confidence score (0-1) |
-| `suspicion_score` | float32 | WitFoo suspicion score (0-1) |
-| `mo_name` | string | Modus operandi |
-| `lifecycle_stage` | string | Kill chain stage |
+| `label_binary` | string | `malicious` / `suspicious` / `benign` |
+| `label_confidence` | float32 | Heuristic confidence in [0, 1] -- see [labeling.md](labeling.md#label-confidence) |
+| `suspicion_score` | float32 | WitFoo Precinct incident score (0-1, only meaningful on `malicious`) |
+| `attack_tactics` | string | JSON array of MITRE ATT&CK tactic IDs (e.g., `["TA0011"]`) |
+| `attack_techniques` | string | JSON array of MITRE ATT&CK technique IDs (e.g., `["T1071"]`) |
+| `mo_name` | string | Modus operandi (incident campaign type) |
+| `lifecycle_stage` | string | WitFoo internal kill-chain stage |
 | `matched_rules` | string | JSON array of matched rule descriptions |
-| `set_roles` | string | JSON array of classification roles |
+| `set_roles` | string | JSON array of WitFoo classification roles (`C2 Server`, etc.) |
 | `product_name` | string | Security product name |
 | `vendor_name` | string | Product vendor |
+| `disposition` | string | Analyst incident status (e.g., `False Positive`); empty if not in an incident |
 
 ## Graph Formats
 

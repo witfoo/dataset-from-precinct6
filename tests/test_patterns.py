@@ -41,9 +41,10 @@ def test_windows_sid():
 
 
 def test_machine_account():
-    assert MACHINE_ACCOUNT.fullmatch("HOSTNAME$")
-    assert MACHINE_ACCOUNT.fullmatch("DC-SERVER01$")
-    assert not MACHINE_ACCOUNT.fullmatch("regular-user")
+    # MACHINE_ACCOUNT uses \b boundaries; test with search() not fullmatch()
+    assert MACHINE_ACCOUNT.search("HOSTNAME$")
+    assert MACHINE_ACCOUNT.search("DC-SERVER01$")
+    assert not MACHINE_ACCOUNT.search("regular-user")
 
 
 def test_customer_domain_pattern_empty():

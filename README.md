@@ -7,9 +7,19 @@ Generate labeled cybersecurity datasets from [WitFoo Precinct](https://www.witfo
 - **Extract** security events and incidents from Precinct 6.x Cassandra databases
 - **Sanitize** PII through a 4-layer pipeline (regex, format-specific parsers, ML/NER, Claude AI review)
 - **Label** events as malicious/suspicious/benign using incident correlation and 261 lead detection rules
-- **Export** to Parquet (signals) and NDJSON/GraphML (provenance graphs)
+- **Generate natural-language attack reports** from each incident's structured metadata (template-based, deterministic)
+- **Export** to Parquet (signals) and NDJSON / streaming GraphML / per-incident GraphML (provenance graphs)
 - **Optional sanitization** — skip PII removal for internal datasets
 - **158 security products** supported across 70+ vendors (Cisco, CrowdStrike, Palo Alto, AWS, Microsoft, etc.)
+- **MITRE ATT&CK mappings** propagated to edges and (optionally) nodes in the provenance graph
+- **Disposition column** distinguishes automated labels from incidents reviewed by SOC analysts
+
+## What this tool does NOT do
+
+- **Does NOT generate synthetic attacks** or controlled adversarial scenarios — extracts only real operational data
+- **Does NOT inject** events into your Precinct deployment
+- **Does NOT mutate** observed data — sanitization replaces PII tokens 1:1 but otherwise preserves the record
+- **Does NOT independently verify labels** — labels reflect WitFoo Precinct's automated incident correlation engine; for human-verified ground truth, use the `disposition` column (`confirmed-malicious`, `dismissed`, `false-positive`, or `automated`)
 
 ## Quick Start
 

@@ -91,9 +91,13 @@ class SignalExporter:
             "label_confidence": labels.get("label_confidence", 0),
             "attack_techniques": json.dumps(labels.get("attack_techniques", [])),
             "attack_tactics": json.dumps(labels.get("attack_tactics", [])),
+            "defense_techniques": json.dumps(labels.get("defense_techniques", [])),
             "mo_name": labels.get("mo_name", ""),
             "suspicion_score": labels.get("suspicion_score", 0),
             "lifecycle_stage": labels.get("lifecycle_stage", ""),
+            "disposition": labels.get("disposition", "automated"),
+            "status_name": labels.get("status_name", ""),
+            "incident_ids": json.dumps(labels.get("incident_ids", [])),
             # Lead rule tagging
             "matched_rules": json.dumps(labels.get("matched_rules", [])),
             "set_roles": json.dumps(labels.get("set_roles", [])),

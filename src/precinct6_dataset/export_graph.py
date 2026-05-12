@@ -57,8 +57,15 @@ class GraphExporter:
         self.nodes = {}  # node_id -> node dict
         self.edges = []  # list of edge dicts
 
-    def export_all(self):
-        """Export all data in graph formats."""
+    def export_all(self, per_incident_graphml: bool = True, streaming_graphml: bool = True):
+        """Export all data in graph formats.
+
+        Args:
+            per_incident_graphml: If True, emit one GraphML file per incident in
+                incidents_graphml/{incident_id}.graphml.
+            streaming_graphml: If True, use streaming GraphML writer for the
+                summary graph (required for very large graphs).
+        """
         print("  Building graph from artifacts and incidents...")
         self._build_from_artifacts()
         self._build_from_incidents()
@@ -68,14 +75,197 @@ class GraphExporter:
         # Export DARPA CDM-style NDJSON
         self._export_ndjson()
 
-        # Export NetworkX formats
-        self._export_networkx()
+        # Per-incident GraphML files (small, loadable per incident)
+        if per_incident_graphml:
+            self._export_per_incident_graphml()
+
+        # Summary GraphML — either streaming or NetworkX
+        if streaming_graphml:
+            self._export_summary_graphml_streaming()
+        else:
+            self._export_networkx()
 
         # Copy sanitized incidents to output
         self._export_incidents()
 
+        # Generate attack reports
+        self._export_attack_reports()
+
         # Export metadata
         self._export_metadata()
+
+    def _export_per_incident_graphml(self):
+        """Write one GraphML file per incident into incidents_graphml/."""
+        from precinct6_dataset.streaming_graphml import (
+            StreamingGraphMLWriter, SIGNAL_NODE_ATTRS, SIGNAL_EDGE_ATTRS,
+        )
+        from precinct6_dataset.label import (
+            MO_TO_LIFECYCLE, SET_ROLE_TO_LIFECYCLE,
+            STATUS_TO_DISPOSITION,
+            _extract_techniques_from_frameworks,
+        )
+        from precinct6_dataset.mitre_mapping import (
+            tactics_for_set_roles, tactics_for_mo,
+            techniques_for_set_roles, techniques_for_mo,
+            merge_unique,
+        )
+
+        incidents_file = self.sanitized_dir / "incidents.jsonl"
+        if not incidents_file.exists():
+            print("  No incidents file — skipping per-incident GraphML")
+            return
+
+        out_dir = self.output_dir / "incidents_graphml"
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        count = 0
+        with open(incidents_file, "rb") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                try:
+                    incident = orjson.loads(line)
+                except Exception:
+                    continue
+
+                inc_id = incident.get("id", "")
+                if not inc_id:
+                    continue
+
+                mo_name = incident.get("mo_name", "")
+                status = incident.get("status_name", "Unprocessed")
+                disposition = STATUS_TO_DISPOSITION.get(status, "automated")
+                suspicion = incident.get("suspicion_score", 0) or 0
+
+                set_role_names = []
+                isets = incident.get("sets", {})
+                if isinstance(isets, dict):
+                    for s in isets.values():
+                        if isinstance(s, dict) and s.get("name"):
+                            set_role_names.append(s["name"])
+                elif isinstance(isets, list):
+                    for s in isets:
+                        if isinstance(s, dict) and s.get("name"):
+                            set_role_names.append(s["name"])
+
+                attack_tactics = merge_unique(
+                    tactics_for_set_roles(set_role_names),
+                    tactics_for_mo(mo_name),
+                )
+
+                tech_set = set()
+                inodes = incident.get("nodes", {})
+                if isinstance(inodes, dict):
+                    for node in inodes.values():
+                        if isinstance(node, dict):
+                            for prod in (node.get("products") or {}).values():
+                                if isinstance(prod, dict):
+                                    for t in _extract_techniques_from_frameworks(prod.get("frameworks", {})):
+                                        tech_set.add(t)
+                attack_techniques = merge_unique(
+                    sorted(tech_set),
+                    techniques_for_set_roles(set_role_names),
+                    techniques_for_mo(mo_name),
+                )
+                lifecycle = MO_TO_LIFECYCLE.get(mo_name, "unknown")
+
+                # Write per-incident graphml
+                out_file = out_dir / f"{inc_id}.graphml"
+                with StreamingGraphMLWriter(out_file, SIGNAL_NODE_ATTRS, SIGNAL_EDGE_ATTRS) as w:
+                    # Nodes
+                    if isinstance(inodes, dict):
+                        for nid, node in inodes.items():
+                            if not isinstance(node, dict):
+                                continue
+                            node_sets = node.get("sets", {})
+                            role_names = []
+                            if isinstance(node_sets, dict):
+                                for s in node_sets.values():
+                                    if isinstance(s, dict) and s.get("name"):
+                                        role_names.append(s["name"])
+                            node_prods = []
+                            for p in (node.get("products") or {}).values():
+                                if isinstance(p, dict) and p.get("name"):
+                                    node_prods.append(p["name"])
+                            w.write_node(nid, {
+                                "type": (node.get("type") or "HOST").upper(),
+                                "ip": node.get("ip_address", node.get("ip", "")),
+                                "hostname": node.get("hostname", ""),
+                                "credential": node.get("credential", ""),
+                                "set_roles": role_names,
+                                "suspicion_score": node.get("suspicion_score", 0) or 0,
+                                "products": node_prods,
+                            })
+
+                    # Edges
+                    iedges = incident.get("edges", {})
+                    if isinstance(iedges, dict):
+                        for edge in iedges.values():
+                            if not isinstance(edge, dict):
+                                continue
+                            w.write_edge(
+                                edge.get("source", ""),
+                                edge.get("target", ""),
+                                {
+                                    "type": "INCIDENT_LINK",
+                                    "timestamp": incident.get("created_at", 0) or 0,
+                                    "label_binary": "malicious",
+                                    "label_confidence": max(0.7, min(1.0, suspicion)) if suspicion > 0 else 0.7,
+                                    "suspicion_score": suspicion,
+                                    "mo_name": mo_name,
+                                    "attack_techniques": attack_techniques,
+                                    "attack_tactics": attack_tactics,
+                                    "set_roles": set_role_names,
+                                    "lifecycle_stage": lifecycle,
+                                    "disposition": disposition,
+                                    "incident_id": inc_id,
+                                },
+                            )
+
+                count += 1
+                if count % 1000 == 0:
+                    print(f"    ... wrote {count:,} per-incident GraphML files", flush=True)
+
+        print(f"  Wrote {count:,} per-incident GraphML files to {out_dir.name}/")
+
+    def _export_summary_graphml_streaming(self):
+        """Stream summary GraphML using StreamingGraphMLWriter — scales to large datasets."""
+        from precinct6_dataset.streaming_graphml import (
+            StreamingGraphMLWriter, SIGNAL_NODE_ATTRS, SIGNAL_EDGE_ATTRS,
+        )
+
+        graphml_file = self.output_dir / "graph.graphml"
+        with StreamingGraphMLWriter(graphml_file, SIGNAL_NODE_ATTRS, SIGNAL_EDGE_ATTRS) as w:
+            for node_id, node in self.nodes.items():
+                attrs = dict(node.get("attrs", {}))
+                attrs["type"] = node.get("type", "")
+                w.write_node(node_id, attrs)
+            for edge in self.edges:
+                src = edge.get("src", "")
+                dst = edge.get("dst", "")
+                if not src or not dst:
+                    continue
+                attrs = dict(edge.get("attrs", {}))
+                attrs["type"] = edge.get("type", "")
+                attrs["timestamp"] = edge.get("timestamp", 0)
+                labels = edge.get("labels", {}) or {}
+                for k in ("label_binary", "label_confidence", "suspicion_score",
+                          "mo_name", "attack_techniques", "attack_tactics",
+                          "set_roles", "lifecycle_stage", "disposition", "incident_id"):
+                    if k in labels:
+                        attrs[k] = labels[k]
+                w.write_edge(src, dst, attrs)
+        size_mb = graphml_file.stat().st_size / 1024 / 1024
+        print(f"  Wrote streaming GraphML: {graphml_file.name} ({size_mb:.1f} MB)")
+
+    def _export_attack_reports(self):
+        """Generate attack_reports.jsonl from incidents."""
+        from precinct6_dataset.attack_reports import generate_attack_reports
+        incidents_file = self.sanitized_dir / "incidents.jsonl"
+        if not incidents_file.exists():
+            return
+        out_file = self.output_dir / "attack_reports.jsonl"
+        generate_attack_reports(self.sanitized_dir, out_file)
 
     def _build_from_artifacts(self):
         """Build graph nodes and edges from artifact records."""
@@ -163,7 +353,23 @@ class GraphExporter:
             self.edges.append(edge)
 
     def _build_from_incidents(self):
-        """Build graph from incident records (pre-formed graphs)."""
+        """Build graph from incident records (pre-formed graphs).
+
+        Each incident edge gets enriched labels: attack_techniques, attack_tactics,
+        set_roles, lifecycle_stage, disposition. Each node gets per-entity labels
+        (suspicion_score, set_roles, products).
+        """
+        from precinct6_dataset.label import (
+            MO_TO_LIFECYCLE, SET_ROLE_TO_LIFECYCLE,
+            STATUS_TO_DISPOSITION,
+            _extract_techniques_from_frameworks,
+        )
+        from precinct6_dataset.mitre_mapping import (
+            tactics_for_set_roles, tactics_for_mo,
+            techniques_for_set_roles, techniques_for_mo,
+            merge_unique,
+        )
+
         incidents_file = self.sanitized_dir / "incidents.jsonl"
         if not incidents_file.exists():
             return
@@ -177,11 +383,83 @@ class GraphExporter:
                 except Exception:
                     continue
 
-                # Add nodes from incident
+                # Compute incident-level labels (shared by all its edges)
+                mo_name = incident.get("mo_name", "")
+                status = incident.get("status_name", "Unprocessed")
+                disposition = STATUS_TO_DISPOSITION.get(status, "automated")
+                suspicion = incident.get("suspicion_score", 0) or 0
+
+                set_role_names = []
+                incident_sets = incident.get("sets", {})
+                if isinstance(incident_sets, dict):
+                    for s in incident_sets.values():
+                        if isinstance(s, dict) and s.get("name"):
+                            set_role_names.append(s["name"])
+                elif isinstance(incident_sets, list):
+                    for s in incident_sets:
+                        if isinstance(s, dict) and s.get("name"):
+                            set_role_names.append(s["name"])
+
+                # MITRE tactics: union of set-role-derived + MO-derived
+                attack_tactics = merge_unique(
+                    tactics_for_set_roles(set_role_names),
+                    tactics_for_mo(mo_name),
+                )
+
+                # MITRE techniques: union of frameworks data + set-role priors + MO priors
+                tech_set = set()
                 nodes = incident.get("nodes", {})
+                if isinstance(nodes, dict):
+                    for node in nodes.values():
+                        if not isinstance(node, dict):
+                            continue
+                        products = node.get("products", {})
+                        if isinstance(products, dict):
+                            for prod in products.values():
+                                if isinstance(prod, dict):
+                                    for t in _extract_techniques_from_frameworks(
+                                        prod.get("frameworks", {})
+                                    ):
+                                        tech_set.add(t)
+                attack_techniques = merge_unique(
+                    sorted(tech_set),
+                    techniques_for_set_roles(set_role_names),
+                    techniques_for_mo(mo_name),
+                )
+
+                lifecycle = MO_TO_LIFECYCLE.get(mo_name, "unknown")
+                if lifecycle == "unknown":
+                    for role in set_role_names:
+                        if role in SET_ROLE_TO_LIFECYCLE:
+                            lifecycle = SET_ROLE_TO_LIFECYCLE[role]
+                            break
+
+                inc_id = incident.get("id", "")
+
+                # Add nodes from incident (with per-entity labels)
                 if isinstance(nodes, dict):
                     for node_id, node in nodes.items():
                         if isinstance(node, dict):
+                            # Extract node-specific set roles
+                            node_sets = node.get("sets", {})
+                            node_set_roles = []
+                            if isinstance(node_sets, dict):
+                                for s in node_sets.values():
+                                    if isinstance(s, dict) and s.get("name"):
+                                        node_set_roles.append(s["name"])
+                            elif isinstance(node_sets, list):
+                                for s in node_sets:
+                                    if isinstance(s, dict) and s.get("name"):
+                                        node_set_roles.append(s["name"])
+
+                            # Per-node products observed
+                            node_products = []
+                            node_prods = node.get("products", {})
+                            if isinstance(node_prods, dict):
+                                for p in node_prods.values():
+                                    if isinstance(p, dict) and p.get("name"):
+                                        node_products.append(p["name"])
+
                             gnode = {
                                 "node_id": node_id,
                                 "type": node.get("type", "HOST").upper(),
@@ -189,11 +467,17 @@ class GraphExporter:
                                     "ip": node.get("ip_address", node.get("ip", "")),
                                     "hostname": node.get("hostname", ""),
                                     "credential": node.get("credential", ""),
+                                    "set_roles": node_set_roles,
+                                    "suspicion_score": node.get("suspicion_score", 0) or 0,
+                                    "products": node_products,
+                                    "internal": node.get("internal", False),
+                                    "managed": node.get("managed", False),
+                                    "incident_id": inc_id,
                                 },
                             }
                             self.nodes[node_id] = gnode
 
-                # Add edges from incident
+                # Add edges from incident (with enriched labels)
                 edges = incident.get("edges", {})
                 if isinstance(edges, dict):
                     for edge_id, edge in edges.items():
@@ -204,14 +488,27 @@ class GraphExporter:
                                 "type": "INCIDENT_LINK",
                                 "timestamp": incident.get("created_at", 0),
                                 "attrs": {
-                                    "incident_id": incident.get("id", ""),
-                                    "mo_name": incident.get("mo_name", ""),
-                                    "status": incident.get("status_name", ""),
+                                    "incident_id": inc_id,
+                                    "mo_name": mo_name,
+                                    "status": status,
+                                    "edge_subtype": edge.get("subtype", ""),
+                                    "started": edge.get("started", 0),
+                                    "ended": edge.get("ended", 0),
+                                    "count": edge.get("count", 0),
+                                    "bytes": edge.get("bytes", 0),
                                 },
                                 "labels": {
                                     "label_binary": "malicious",
-                                    "suspicion_score": incident.get("suspicion_score", 0),
-                                    "mo_name": incident.get("mo_name", ""),
+                                    "label_confidence": max(0.7, min(1.0, suspicion)) if suspicion > 0 else 0.7,
+                                    "suspicion_score": suspicion,
+                                    "mo_name": mo_name,
+                                    "attack_techniques": attack_techniques,
+                                    "attack_tactics": attack_tactics,
+                                    "set_roles": set_role_names,
+                                    "lifecycle_stage": lifecycle,
+                                    "disposition": disposition,
+                                    "status_name": status,
+                                    "incident_id": inc_id,
                                 },
                             })
 

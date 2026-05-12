@@ -83,7 +83,7 @@ DOMAIN_BACKSLASH_USER = re.compile(
 )
 
 # Machine accounts (ending with $)
-MACHINE_ACCOUNT = re.compile(r'\b[A-Z][A-Z0-9-]{2,30}\$\b')
+MACHINE_ACCOUNT = re.compile(r'\b[A-Z][A-Z0-9-]{2,30}\$(?=\s|$|[^A-Za-z0-9])')
 
 
 # --- Cloud/AWS ---
